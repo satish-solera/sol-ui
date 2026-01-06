@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -13,8 +13,11 @@
     "clsx": "^2.1.1",
     "motion": "^12.23.26",
     "next": "16.1.1",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-native-web": "^0.21.2",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
