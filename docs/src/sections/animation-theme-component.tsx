@@ -18,22 +18,22 @@ function AnimationThemeComponent() {
                     <div className="grid grid-cols-2 w-xl  gap-2">
 
                         <div className="h-40">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen2.jpg'draggable={false}  className='object-cover h-full w-full' />
                         </div>
                         <div className="h-60">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen-3.jpg' draggable={false} className='object-cover h-full w-full' />
                         </div>
                         <div className="h-60 -translate-y-20">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen-4.jpg' draggable={false} className='object-cover h-full w-full' />
                         </div>
                         <div className="h-40">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen2.jpg' draggable={false} className='object-cover h-full w-full' />
                         </div>
                         <div className="h-40  -translate-y-20">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen2.jpg' draggable={false} className='object-cover h-full w-full' />
                         </div>
                         <div className="h-40 -translate-y-20">
-                            <img src='/screen2.jpg' className='object-cover h-full w-full' />
+                            <img src='/screen-5.jpg' draggable={false} className='object-cover h-full w-full' />
                         </div>
                        
 

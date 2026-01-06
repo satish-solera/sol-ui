@@ -18,6 +18,7 @@ import AnimationThemeComponent from "@/src/sections/animation-theme-component";
 import CardAnimate from "@/src/components/ui/card-animate";
 import { ComponentPreview } from "@/src/components/docs/component-preview";
 import { ComponentContainer } from "@/src/components/docs/component-container";
+import ComponentShow from "@/src/sections/component-show";
 
 
 
@@ -102,17 +103,19 @@ export default function Home() {
       <div className="min-h-svh"></div>
       <AnimationThemeComponent />
 
-      <div className="min-h-screen">
+      <div className="min-h-40">
 
       </div>
 
 
 
+<ComponentShow/>
 
-      {/* card animate android screens page
+
+     {/* card animate android screens page */}
     <div className="min-h-screen mt-60">
         <CardAnimate />
-    </div> */}
+    </div> 
 
       {/*  end card animate page */}
 

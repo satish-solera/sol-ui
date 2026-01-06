@@ -4,11 +4,11 @@ import React from 'react'
 
 function CardAnimate() {
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-svh'>
 
             <div className="cards relative flex shrink mx-auto items-center justify-center">
                 <div className="card  bg-neutral-200 rounded-2xl absolute -translate-x-[100%]  translate-y-[25%] ">
-                    <img src='/screen2.jpg' alt='img'/>
+                    <img src='/image11.jpg' alt='img'/>
                 </div>
                 <div className="card  bg-red-200 rounded-2xl absolute -translate-x-[80%] translate-y-[20%]">
                     <img src='/image3.jpg' alt='img'/>
