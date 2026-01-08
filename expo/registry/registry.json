@@ -1,6 +1,13 @@
+
+
 {
-    "button":{
-        "files": ["components/ui/button.tsx"],
-        "target": "components/ui"
-    }
+ "name": "button",
+ "files":[
+    {
+        
+        "path" : "components/button.tsx",
+        "target":"components/ui"
+
+}
+ ]
 }
