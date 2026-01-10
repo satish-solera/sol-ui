@@ -13,7 +13,7 @@ export function InfoBadge({task = "Buy Coffee" } :{task : string}) {
         
         setInterval(() => {
 
-            // setTime((el) =>  el - 1)
+            
 
             if (time == 0) {
 
@@ -31,7 +31,6 @@ export function InfoBadge({task = "Buy Coffee" } :{task : string}) {
                 <View className="">
                     <Text className="py-1 font-medium text-white/90 ">{save ? "Selected Tasks" : "Task has been updated"}</Text>
                     {
-
                         save &&
                         <View>
                             <Pressable className="bg-neutral-200 py-1 px-3 rounded-md"  >
@@ -53,9 +52,7 @@ export function InfoBadge({task = "Buy Coffee" } :{task : string}) {
                     </Pressable>
                 </View>
             </View>
-
             {save ? '' : <View className="bg-neutral-200 h-8 mt-4 "> <Text className="w-full m-auto px-4">This Message close in {time} seconds</Text> </View>}
-
         </View>
     )
 }
@@ -73,7 +70,7 @@ export function ErrorBadge({title = "User not found"}:{title : string}) {
 }
 
 
-export function WarningBadge({title = "download Again"} : {title : string}) {
+export  function WarningBadge({title = "download Again"} : {title : string}) {
     return (
         <View className="w-48 border border-neutral-200 shadow-sm bg-yellow-200/50 h-14 py-2  flex items-center justify-center mx-auto rounded-md shadow-inherit">
             <View>

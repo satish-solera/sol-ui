@@ -1,14 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import { Button } from "./components";
+import PopCard from "./components/ui/pop-card";
 
 
-export default function ButtonDemo() {
+export default function PopCardDemo() {
     return (
         <View className='flex items-center justify-center min-h-screen'>
-            <Button>
-                Sol Ui
-            </Button>
+           <PopCard />
         </View>
     )
 }

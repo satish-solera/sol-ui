@@ -1,14 +1,14 @@
 import React from "react";
 import { View } from "react-native";
-import { Button } from "./components";
+
+import ScrollCard from "./components/ui/scroll-card";
 
 
-export default function ButtonDemo() {
+
+export default function ScrollCardDemo() {
     return (
         <View className='flex items-center justify-center min-h-screen'>
-            <Button>
-                Sol Ui
-            </Button>
+          <ScrollCard />
         </View>
     )
 }
