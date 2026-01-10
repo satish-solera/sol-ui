@@ -1,10 +1,54 @@
-
 [
     {
         "name": "button",
         "files": [
             {
                 "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "profile-card",
+        "files": [
+            {
+                "path": "components/profile-card.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "filter",
+        "files": [
+            {
+                "path": "components/filter.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "menu",
+        "files": [
+            {
+                "path": "components/menu.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "pop-card",
+        "files": [
+            {
+                "path": "components/pop-card.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "scroll-card",
+        "files": [
+            {
+                "path": "components/scroll-card.tsx",
                 "target": "components/ui"
             }
         ]
