@@ -85,7 +85,7 @@ function Navbar() {
                 <div className="flex mx-10 md:mx-20 gap-4 items-center">
                     {/* navLinks */}
                     <ul >
-                        <Link href='/docs'>
+                        <Link href='/docs/introduction'>
                             <li>
                                 docs
                             </li>

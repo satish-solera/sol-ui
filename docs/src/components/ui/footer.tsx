@@ -95,18 +95,19 @@ function Footer() {
 
 
                 <div className="m-auto">
-                    <ul className='w-sm h-40 px-10'>
-                        <Link href='/docs'>
-
+                    <ul className='w-sm h-fit py-5 px-10'>
+                        <Link href='/docs/introduction'>
                             <li className={cn('list text-xl font-medium ')}>
                                 Components
-                            </li> </Link>
+                            </li> 
+                        </Link>
 
                         <Link href='https://github.com/satish-solera'>
                             <li className='list text-3xl font-bold'>
                                 Github
                             </li>
                         </Link>
+
                         <Link href=''>
                             <li className='list text-xl'>
                                 Tweeter
@@ -116,7 +117,7 @@ function Footer() {
                     {/* gives sponcers */}
 
                     <div className="w-sm px-10">
-                        <p className='text-md'></p>
+                        
                         <motion.button
                             initial={{
                                 rotate: 0
@@ -157,7 +158,7 @@ function Footer() {
                     </div>
 
                     <div className="my-10 grid grid-cols-2 gap-5 mx-2 ">
-                        <div className="border border-black dark:border-neutral-300 rounded-lg col-span-1 h-40 flex  flex-col justify-center p-4">
+                        <div className="border border-black dark:border-neutral-300 rounded-lg col-span-1 h-20 flex  flex-col justify-center p-4">
                             <h1 className='text-md py-1'>Open Isuue (bug , new idea) on github</h1>
                             <button className='group flex gap-2 items-center py-2   px-3 border border-black dark:border-neutral-300 rounded-lg w-fit'>
                                 Github <IconBrandGithub size={16} />
