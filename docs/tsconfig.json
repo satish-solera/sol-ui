@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "@expo/*" : ["../expo/*"],
-      "fumadocs-mdx:collections/*": ["./source/*"]
+      "fumadocs-mdx:collections/*": [".source/*"]
     }
   },
   "include": [
