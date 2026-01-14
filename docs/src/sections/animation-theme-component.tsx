@@ -78,7 +78,7 @@ function AnimationThemeComponent() {
 
                         </iframe>
                         <iframe
-                            src="https://sol-ui-krma.vercel.app/ButtonDemo"
+                            src="https://sol-ui-krma.vercel.app/InfoBadgeDemo"
                             width={200}
                             height={300}
                             className='col-span-1'
@@ -86,7 +86,7 @@ function AnimationThemeComponent() {
 
                         </iframe>
                         <iframe
-                            src="https://sol-ui-krma.vercel.app/ButtonDemo"
+                            src="https://sol-ui-krma.vercel.app/ProfileCardDemo"
                             width={200}
                             height={270}
                             className='col-span-1'
@@ -94,7 +94,7 @@ function AnimationThemeComponent() {
 
                         </iframe>
                         <iframe
-                            src="https://sol-ui-krma.vercel.app/ButtonDemo"
+                            src="https://sol-ui-krma.vercel.app/FilterDemo"
                             width={200}
                             height={270}
                             className='col-span-1'
