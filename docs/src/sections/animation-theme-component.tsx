@@ -79,24 +79,24 @@ function AnimationThemeComponent() {
                         </iframe>
                         <iframe
                             src="https://sol-ui-krma.vercel.app/InfoBadgeDemo"
-                            width={200}
-                            height={300}
-                            className='col-span-1'
+                            width={400}
+                            height={400}
+                            className='col-span-1 flex items-center justify-center'
                         >
 
                         </iframe>
                         <iframe
                             src="https://sol-ui-krma.vercel.app/ProfileCardDemo"
-                            width={200}
-                            height={270}
+                            width={300}
+                            height={400}
                             className='col-span-1'
                         >
 
                         </iframe>
                         <iframe
                             src="https://sol-ui-krma.vercel.app/FilterDemo"
-                            width={200}
-                            height={270}
+                            width={400}
+                            height={400}
                             className='col-span-1'
                         >
 
