@@ -1,7 +1,7 @@
 
 "use client"
 import { cn } from '@/lib/utils/cn'
-import { IconArrowBadgeLeft, IconBrandGithub} from '@tabler/icons-react';
+import { IconArrowBadgeLeft, IconBrandGithub } from '@tabler/icons-react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
@@ -9,9 +9,56 @@ import Link from 'next/link';
 function Footer() {
     return (
         <footer className='min-h-[400px]  relative flex items-center  '>
-            <div className="grid grid-cols-[1fr_1fr] mx-auto gap-x-60">
+            <div className="grid grid-cols-[1fr] md:grid-cols-[1fr_1fr] mx-4 md:mx-auto md:gap-x-60 gap-5 ">
                 <ScheduleCall />
-                <SocialLink />
+                {/* desktop */}
+                <div className="md:block hidden">
+                    <SocialLink />
+                </div>
+                {/* mobile */}
+                <div className="md:hidden block grid grid-cols-2" >
+
+                    {/* href list */}
+                    <div className="flex items-center justify-center">
+                        <ul className='w-sm h-fit py-5 px-10 '>
+                            <Link href='/docs/introduction'>
+                                <li className={cn('list text-xl font-semibold  ')}>
+                                    docs
+                                </li>
+                            </Link>
+                            <Link href='https://x.com/SatishSolera'>
+                                <li className='list text-xl '>
+                                    Twitter
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
+
+                    {/* github */}
+                    <div className="">
+                        <Link href='https://github.com/satish-solera/sol-ui'>
+                            <motion.div className="w-full h-full flex items-center justify-center cursor-pointer"
+                                initial={{
+                                    scale: 1,
+                                }}
+
+                                whileHover={{
+                                    scale: 1.04
+                                }}
+
+
+                                transition={{
+                                    duration: 0.3
+                                }}>
+                                <IconBrandGithub size={40} className=' ' />
+                            </motion.div>
+                        </Link>
+
+                     
+                    </div>
+
+                </div>
+
                 <BottomFooter />
             </div>
         </footer>
@@ -23,7 +70,7 @@ export default Footer
 
 export const ScheduleCall = () => {
     return (
-        <div className="relative h-64 w-72 bg-white dark:bg-black/50 rounded-2xl shadow-sm ring-1 ring-black/10 dark:ring-neutral-500 px-5  py-5">
+        <div className="relative h-64 w-72 bg-white dark:bg-black/50 rounded-2xl shadow-sm ring-1 ring-black/10 dark:ring-neutral-500 px-5  py-5 mx-auto">
             <button className="py-2 px-4 rounded-md  shadow-sm shadow-white dark:shadow-black/10 ring-1 ring-black/10 dark:ring-neutral-500 dark:text-white text-black flex gap-2 items-center">
                 <div className='size-2 dark:bg-white bg-black rounded-full'></div>  Schedule a Call
             </button>
@@ -122,6 +169,10 @@ export const BottomFooter = () => {
                     )
                 })
             }
+
+               <div className="w-28 md:hidden block  items-center  py-px">
+                            <a href="https://www.buymeacoffee.com/satishsolen"><img src="https://img.buymeacoffee.com/button-api/?text=Buymeacoffee&emoji=&slug=satishsolen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+                        </div>
         </div>
     )
 }

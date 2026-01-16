@@ -22,7 +22,7 @@ function AnimationThemeComponent() {
   return (
     <div className="min-h-screen">
       <div className="py-5">
-        <div className="  py-0.5  rounded-[5px]  flex items-center mx-20 gap-2">
+        <div className="  py-0.5  rounded-[5px]  flex items-center mx-2 sm:mx-20 gap-2">
           <motion.button className=" py-2 px-3 rounded-md ring-1 ring-black/30 dark:ring-neutral-500 cursor-pointer text-black dark:text-white">
             Checkout Some UI
           </motion.button>
@@ -31,7 +31,7 @@ function AnimationThemeComponent() {
           </motion.button>
         </div>
       </div>
-      <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 mx-0.5">
+      <div className="grid  grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
         {demoUrl.map((el, id) => {
           return <ComponentCard src={el.url} key={id} />;
         })}
