@@ -71,7 +71,7 @@ function Navbar() {
                                 animate={{ y: "0%", opacity: 1 }}
                                 exit={{ y: "-100%", opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                className='relative h-full flex items-center justify-center text-center' // Full height, centered
+                                className='relative h-full flex items-center justify-center text-center w-10' // Full height, centered
                             >
                                 {texts[index]}
                             </motion.span>

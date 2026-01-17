@@ -11,7 +11,7 @@ function Hero() {
                     <h1 className="block mt-2 text-muted-foreground font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05] text-shadow-2xs">
                         Provided By Roukhood
                     </h1>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6 text-balance ">
+                    <h1 className="text-4xl sm:text-2xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6 text-balance ">
                         Make Your Android Screens Better
                     </h1>
                     <div className="flex items-center justify-center mx-auto">
