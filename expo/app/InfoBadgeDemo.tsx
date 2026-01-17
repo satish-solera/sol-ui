@@ -5,7 +5,7 @@ import {  InfoBadge } from "./components";
 
 export default function InfoBadgeDemo() {
     return (
-        <View className='flex items-center justify-center min-h-screen'>
+        <View className='flex items-center justify-center min-h-screen w-full'>
             <InfoBadge info="solUI launching" />
         </View>
     )
