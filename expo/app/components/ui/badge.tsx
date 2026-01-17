@@ -1,7 +1,7 @@
 
 import React, { useState } from "react"
 import { View, Text, Pressable, TextInput } from "react-native"
-
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather'
 export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
 
@@ -10,7 +10,7 @@ export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
         <View className=" w-64 h-60 bg-black/5 rounded-2xl p-1">
             <View className="w-full h-full bg-white border border-neutral-300 rounded-[12px] flex items-center justify-center ">
                 <Text>
-                    Icon
+                    <AntDesign name="warning" size={20} /> 
                 </Text>
                 <Text className="font-semibold">
                     To your attention!
