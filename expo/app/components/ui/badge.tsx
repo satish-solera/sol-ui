@@ -4,8 +4,6 @@ import { View, Text, Pressable, TextInput } from "react-native"
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather'
 export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
-
-
     return (
         <View className=" w-64 h-60 bg-black/5 rounded-2xl p-1">
             <View className="w-full h-full bg-white border border-neutral-300 rounded-[12px] flex items-center justify-center ">
