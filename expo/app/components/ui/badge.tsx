@@ -26,7 +26,7 @@ export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
                             Accept
                         </Text>
                     </Pressable>
-                    <Pressable className="absolute top-1 h-full w-20 shadow-sm border border-black/5 bg-white px-3 rounded-md active:translate-x-[96px]">
+                    <Pressable className="absolute  h-full w-20 shadow-sm border border-black/5 bg-white px-3 rounded-md active:translate-x-[96px]">
                         <View className="absolute inset-0 border-r border-black/50  right-10 top-1 bottom-1">
 
                         </View>
