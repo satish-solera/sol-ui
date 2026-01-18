@@ -78,6 +78,7 @@ export const ScheduleCall = () => {
                 <b>Have a Project ? </b>
                 <p className='text-neutral-400'>we  would love to hear from you</p>
             </p>
+            <Link  href="https://cal.com/satish-solera-vcuclh/15min">
             <motion.button
                 initial={{
                     scale: 1,
@@ -92,6 +93,7 @@ export const ScheduleCall = () => {
                 className='absolute bottom-0 right-0 size-15  dark:text-white text-black  rounded-lg z-20 cursor-pointer'>
                 <IconArrowBadgeLeft size={50} className='rotate-130 flex items-center justify-center mx-auto ' />
             </motion.button>
+            </Link>
             <div className='absolute bottom-0 right-0 size-15  p-8 shadow-sm ring-1 ring-black/30 dark:ring-neutral-500  z-10'
                 style={{
                     borderRadius: '15px 0px 15px'
