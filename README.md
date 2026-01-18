@@ -2,8 +2,8 @@
 <p align="center">
   <!-- Repo stats -->
   <img src="https://img.shields.io/github/stars/satish-solera/sol-ui" />
-  <img src="https://img.shields.io/github/forks/satish-solera/sol-ui?style=social" />
-  <img src="https://img.shields.io/github/issues/satish-solera/sol-ui?style=social" />
+  <img src="https://img.shields.io/github/forks/satish-solera/sol-ui" />
+  <img src="https://img.shields.io/github/issues/satish-solera/sol-ui" />
 </p>
 
 
