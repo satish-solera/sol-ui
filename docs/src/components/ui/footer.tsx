@@ -143,13 +143,17 @@ export const SocialLink = () => {
                     </motion.div>
                 </Link>
             </div>
+            <div className=""></div>
             <div className="size-40 shadow ring-1 ring-neutral-200 py-0.5 px-3 rounded-[5px] bg-white flex items-center justify-center p-0.5">
                 <a href="https://www.buymeacoffee.com/satishsolen"><img src="https://img.buymeacoffee.com/button-api/?text=Buymeacoffee&emoji=&slug=satishsolen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
             </div>
 
-            <div className="size-40 shadow ring-1  ring-black/10 py-0.5  rounded-[5px] bg-white text-black flex items-center justify-center">
+            {/* <div className="size-40 shadow ring-1  ring-black/10 py-0.5  rounded-[5px] bg-white text-black flex items-center justify-center">
+              <Link href="">
                 <motion.button className='dark:bg-neutral-100 py-2 px-3 rounded-md ring-1 dark:ring-black/30 ring-neutral-500 cursor-pointer'>Become Sponcer</motion.button>
-            </div>
+
+                </Link>
+            </div> */}
         </div>
     )
 }
