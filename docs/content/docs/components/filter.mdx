@@ -12,10 +12,10 @@ import { SourceCode } from "@/src/components/ui/source-code";
   <Tab value="Preview">
     <ComponentPreview>
      <iframe
-                            src="https://sol-ui-krma.vercel.app/FilterDemo"
+                            src="https://sol-ui-krma.vercel.app/demo/FilterDemo"
                             width={400}
                             height={400}
-                            className='col-span-1'
+                            
                         />
     </ComponentPreview>
   </Tab>
@@ -121,7 +121,7 @@ export const AddFilter = ({ label, icon }: AddFilters) => {
 <Tabs items={['CLI', 'Manual']}>
   <Tab value="CLI">
     ```bash
-    npm sol add filter
+    npx solui@latest add filter
     ```
   </Tab>
   <Tab value="Manual">
@@ -136,7 +136,7 @@ export const AddFilter = ({ label, icon }: AddFilters) => {
       <Step>
         ### Copy the code
 
-        Copy the code from the **Code** tab above into `components/ui/pop-card.tsx`.
+        Copy the code from the **Code** tab above into `components/ui/filter.tsx`.
       </Step>
       <Step>
         ### Update imports
