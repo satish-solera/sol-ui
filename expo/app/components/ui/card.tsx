@@ -46,4 +46,5 @@ export const CardButton = ({children} : {children : React.ReactNode}) =>{
             </Text>
         </Pressable>
     )
+
 }
