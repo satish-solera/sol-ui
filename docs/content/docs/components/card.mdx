@@ -124,6 +124,12 @@ export const CardButton = ({children, onPress} : {children : React.ReactNode, on
 import { Card, CardBody, CardButton, CardHeader } from '@components/ui/card';
 
 export default function CardDemo() {
+    const [isFollowed, setIsFollowed] = useState(false);
+
+    const handlePress = () => {
+        setIsFollowed(!isFollowed);
+        Alert.alert("Status", isFollowed ? "Unfollowed" : "Followed");
+    };
     return 
      <Card>
                 <CardHeader>

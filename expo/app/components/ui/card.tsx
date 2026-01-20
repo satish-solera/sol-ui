@@ -14,8 +14,8 @@ export const Card = ({children} : {children : React.ReactNode}) => {
 
 export const CardHeader = ({children} : {children : React.ReactNode}) => {
     return (
-        <View className="w-full h-16 bg-black/5 overflow-hidden border-b border-neutral-300">
-            <Text className="text-2xl font-medium m-5">
+        <View className="w-full h-20 bg-black/5 overflow-hidden border-b border-neutral-300">
+            <Text className="text-2xl font-medium m-4">
                 {
                     children
                 }
