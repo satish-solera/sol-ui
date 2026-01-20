@@ -51,7 +51,7 @@ export const CardHeader = ({children} : {children : React.ReactNode}) => {
 
 export const CardBody = ({children } : {children : React.ReactNode}) =>{
     return(
-        <View className="m-5 ">
+        <View className="m-5">
             <Text className="text-neutral-500">
                {
                 children
@@ -61,10 +61,13 @@ export const CardBody = ({children } : {children : React.ReactNode}) =>{
     )
 }
 
-export const CardButton = ({children} : {children : React.ReactNode}) =>{
+export const CardButton = ({children, onPress} : {children : React.ReactNode, onPress?: () => void}) =>{
     return(
-        <Pressable className="py-1 px-3  border border-neutral-200 rounded-md m-5 mb-0 w-20">
-            <Text className="text-center">
+        <Pressable 
+            onPress={onPress}
+            className="py-1 px-3  border border-neutral-200 rounded-md m-5 mb-0 min-w-20 active:bg-neutral-100"
+        >
+            <Text className="text-center font-semibold">
                 {
                     children
                 }
@@ -73,7 +76,6 @@ export const CardButton = ({children} : {children : React.ReactNode}) =>{
     )
 }
 `
-     
   }/>
   </Tab>
 </Tabs>
@@ -123,11 +125,17 @@ import { Card, CardBody, CardButton, CardHeader } from '@components/ui/card';
 
 export default function CardDemo() {
     return 
-      <Card>
-        <CardHeader>hi</CardHeader>
-        <CardButton>hi</CardButton>
-        <CardBody>hii</CardBody>
-      </Card>;
+     <Card>
+                <CardHeader>
+                    User Profile
+                </CardHeader>
+                <CardBody>
+                    Join our community and get exclusive updates. Premium members enjoy early access to new features and special discounts.
+                </CardBody>
+                <CardButton onPress={handlePress}>
+                    {isFollowed ? "Following" : "Follow"}
+                </CardButton>
+     </Card>;
 }
 ```
 
