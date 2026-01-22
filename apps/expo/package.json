@@ -1,8 +1,10 @@
 {
-  "name": "magma-application",
+  "name": "@sol-ui/expo",
   "version": "1.0.0",
+  "private": true,
   "main": "expo-router/entry",
   "scripts": {
+    "dev": "expo start",
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
@@ -35,6 +37,5 @@
     "@types/react-native": "^0.72.8",
     "@types/react-native-vector-icons": "^6.4.18",
     "typescript": "~5.8.3"
-  },
-  "private": true
+  }
 }
