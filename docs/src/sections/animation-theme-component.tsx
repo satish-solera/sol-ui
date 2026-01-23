@@ -5,11 +5,7 @@ import { cn } from "@/lib/utils/cn";
 import { motion } from "motion/react";
 
 const demoUrl = [
-  {
-    docsUrl: "/docs/filter",
-    demoUrl: "https://sol-ui-krma.vercel.app/demo/MoneyCheckoutDemo",
-    className: " "
-  },
+
  
   {
     docsUrl: "/docs/discrete-tabs",
@@ -24,14 +20,20 @@ const demoUrl = [
     demoUrl: "https://sol-ui-krma.vercel.app/demo/CardDemo",
   },
   {
+
+   docsUrl: "/docs/button",
+   demoUrl: "https://sol-ui-krma.vercel.app/demo/ButtonDemo",
+ },
+  {
     docsUrl: "/docs/filter",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/FilterDemo",
     className: " h-[400px] md:col-span-2"
   },
-   {
-
-    docsUrl: "/docs/button",
-    demoUrl: "https://sol-ui-krma.vercel.app/demo/ButtonDemo",
+    {
+    docsUrl: "/docs/money-checkout",
+    demoUrl: "https://sol-ui-krma.vercel.app/demo/MoneyCheckoutDemo",
+    className: "h-[580px] "
+   
   },
 ];
 function AnimationThemeComponent() {
@@ -63,7 +65,7 @@ export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , classN
       <div className={cn("h-[600px] w-full flex items-center justify-center" , className)}>
         <iframe
           src={demoSrc}
-          className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10" )}
+          className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10 " )}
         ></iframe>
       </div>
   );
