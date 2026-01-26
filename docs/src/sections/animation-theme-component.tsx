@@ -32,7 +32,7 @@ const demoUrl = [
     {
     docsUrl: "/docs/money-checkout",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/MoneyCheckoutDemo",
-    className: "h-[580px] "
+    className: "w-[365px] h-[580px] "
    
   },
 ];
