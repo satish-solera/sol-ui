@@ -32,28 +32,17 @@ Execute one of the following commands in your terminal:
 Initialize the project by using the `init` command.
 
 ```bash
-heroui init my-heroui-app
+solui init
 ```
-
-Install the dependencies to start the local server:
-
-<PackageManagers
-  commands={{
-    npm: "cd solui-app && npm install",
-    yarn: "cd solui-app && yarn install",
-    pnpm: "cd solui-app && pnpm install",
-    bun: "cd solui-app && bun install",
-  }}
-/>
 
 Start the local server:
 
 <PackageManagers
   commands={{
-    npm: "npm run dev",
-    yarn: "yarn run dev",
-    pnpm: "pnpm run dev",
-    bun: "bun run dev",
+    npm: "cd solui-app && npm run dev",
+    yarn: "cd solui-app && yarn run dev",
+    pnpm: "cd solui-app && pnpm run dev",
+    bun: "cd solui-app && bun run dev",
   }}
 />
 
@@ -71,18 +60,55 @@ If you prefer not to use the CLI, you may try individual installation to set up 
 
 Most components rely on `nativewind` for CSS and `react-native-vector-icons` for a Icons Library. Run the following command in your terminal:
 
-```bash
-npm install nativewind react-native-vector-icons
-```
-
 <PackageManagers
   commands={{
-    npm: "npm install nativewind react-native-vector-icons n",
-    yarn: "yarn add nativewind react-native-vector-icons ",
-    pnpm: "pnpm add nativewind react-native-vector-icons ",
-    bun: "bun add nativewind react-native-vector-icons ",
+    npm: "npm install  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    yarn: "yarn add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    pnpm: "pnpm add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    bun: "bun add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
   }}
 />
+
+
+Create tailwind.config.js
+
+```bash
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}"
+  ],
+  presets: [require("nativewind/preset")],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
+
+Create global.css
+
+```bash
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Create babel.config.js
+
+```bash
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: [
+      ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+      "nativewind/babel",
+    ],
+    plugins: [
+      'react-native-reanimated/plugin',
+    ],
+  };
+};
+```
 
 1. Browse the [Components](/docs/components/badge).
 2. Click on the component you want to use.
