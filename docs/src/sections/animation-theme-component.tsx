@@ -27,12 +27,14 @@ const demoUrl = [
   {
     docsUrl: "/docs/filter",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/FilterDemo",
-    className: " h-[400px] md:col-span-2"
+    className: "  md:col-span-2",
+    iframeClass: "w-[600px]"
   },
     {
     docsUrl: "/docs/money-checkout",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/MoneyCheckoutDemo",
-    className: "w-[365px] h-[580px] "
+    className: " w-[358px]",
+    iframeClass : "w-[360px]"
    
   },
 ];
@@ -51,7 +53,7 @@ function AnimationThemeComponent() {
       </div>
       <div className="grid  grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
         {demoUrl.map((el, id) => {
-          return <ComponentCard demoSrc={el.demoUrl} key={id} className={el.className} />
+          return <ComponentCard demoSrc={el.demoUrl} key={id} className={el.className} iframeClass={el.iframeClass} />
         })}
       </div>
     </div>
@@ -60,7 +62,7 @@ function AnimationThemeComponent() {
 
 export default AnimationThemeComponent;
 
-export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , className ?: string}) => {
+export const ComponentCard = ({ demoSrc , className , iframeClass}: { demoSrc: string , className ?: string , iframeClass ?: string}) => {
   return (
       <div className={cn("h-[600px] w-full flex items-center justify-center relative" , className)}>
 {/*          
@@ -69,7 +71,7 @@ export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , classN
       //   ></iframe> */}
 
           <iframe
-            className={cn("w-[325px] h-[600px] overflow-hidden rounded-2xl shadow-[0px_0px_30px_0px_rgba(38,38,38,0.10)]" , className)}
+            className={cn("w-[325px] h-[600px] overflow-hidden rounded-2xl shadow-[0px_0px_30px_0px_rgba(38,38,38,0.10)]" , iframeClass)}
             src={demoSrc}
             title="InfoBadge demo"
             style={{
