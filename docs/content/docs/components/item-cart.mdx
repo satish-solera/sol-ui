@@ -1,3 +1,34 @@
+---
+title: Item Cart
+description: Showcase your products.
+---
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { ComponentPreview } from "@/src/components/ui/component-preview";
+import { SourceCode } from "@/src/components/ui/source-code";
+import { APITable } from "@/src/components/docs/api-table";
+import { PackageManagers } from "@/src/components/docs/package-manager";
+
+
+<Tabs items={["Preview", "Code"]}>
+  <Tab value="Preview">
+    <ComponentPreview>
+          <iframe
+            className="w-[325px] h-[600px] overflow-hidden rounded-2xl shadow-[0px_0px_30px_0px_rgba(38,38,38,0.10)]"
+            src="https://sol-ui-krma.vercel.app/demo/ItemCartDemo"
+            title="ItemCart demo"
+            style={{
+              transformOrigin: '0px 0px',
+              // transform: "",
+            }}
+            loading="lazy"
+          />
+    </ComponentPreview>
+  </Tab>
+  <Tab value="Code">
+  <SourceCode content={
+    `
 import * as React from "react";
 import {
   Pressable,
@@ -25,8 +56,8 @@ type PanContext = {
 };
 
 export default ({
-  price = 230,
-  itemName = "Printed shirt",
+  price,
+  itemName,
   sizeOptions,
   colorOptions,
   compositionOptions,
@@ -122,7 +153,7 @@ export default ({
             {imageData.map((el, id) => {
               return (
                 <View
-                  className={`size-24  rounded-md overflow-hidden ${image == el.imgSrc ? "scale-110" : "scale-100"}`}
+                  className={\`size-24  rounded-md overflow-hidden \${image == el.imgSrc ? "scale-110" : "scale-100"}\`}
                   key={id}
                 >
                   <Pressable onPress={() => setImage(el.imgSrc)}>
@@ -150,7 +181,7 @@ export default ({
           {/* item name and price */}
           <View className="mx-5 mt-10 mb-5 flex flex-row justify-between items-center">
             <Text className="text-xl font-medium">{itemName}</Text>
-            <Text className="text-xl font-medium">{`$ ${price}`}</Text>
+            <Text className="text-xl font-medium">{\`$ \${price}\`}</Text>
           </View>
           {/* item details */}
           <View className="w-80 h-fit pt-5 mx-5 ">
@@ -217,3 +248,112 @@ export default ({
     </View>
   );
 };
+`
+}/>
+
+  </Tab>
+</Tabs>
+
+
+## Installation
+
+<Tabs items={['Command', 'Manual']}>
+  <Tab value="Command">
+
+<PackageManagers
+  commands={{
+    cli: "npx solui@latest add item-cart"
+  }}
+/>
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        ### Install dependencies
+
+       <PackageManagers
+commands={{
+    npm: "npm install  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    yarn: "yarn add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    pnpm: "pnpm add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    bun: "bun add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+  }}
+/>
+</Step>
+
+
+ ### Copy the code
+<Step>
+        Copy the code from the **Code** tab above into `components/ui/item-cart.tsx`.
+      </Step>
+      <Step>
+        ### Update imports
+
+        Update the imports to match your project structure.
+      </Step>
+  </Steps>
+
+  </Tab>
+</Tabs>
+
+
+## Usage
+
+```tsx
+import ItemCart from '@/components/ui/item-cart';
+
+export default function InfoBadgeDemo() {
+  return <ItemCart 
+                price={dummyData.price}
+                itemName={dummyData.itemName}
+                sizeOptions={dummyData.sizeOptions}
+                colorOptions={dummyData.colorOptions}
+                compositionOptions={dummyData.compositionOptions}
+                imageData={dummyData.imageData}
+            />;
+}
+```
+
+
+## Props
+
+<APITable
+  data={[
+    {
+      prop: "price",
+      type: "number",
+      defaultValue: 230,
+      description: "Price of the item",
+    },
+    {
+      prop: "itemName",
+      type: "string",
+      defaultValue: "Printed Shirt",
+      description: "Name of the item",
+    },
+    {
+      prop: "sizeOptions",
+      type: "string []",
+      defaultValue: "Large",
+      description: "Size  of the item",
+    },
+    {
+      prop: "compositionOptions",
+      type: "string []",
+      defaultValue: "Silk Bamboo",
+      description: "composition of the item",
+    },
+    {
+      prop: "colorOptions",
+      type: "string []",
+      defaultValue: "Green",
+      description: "Color  of the item",
+    },
+    {
+      prop: "imageData",
+      type: "{imgSrc: string []}",
+      defaultValue: "",
+      description: "images of the item",
+    },
+  ]}
+/>
