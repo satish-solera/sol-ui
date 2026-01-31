@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "solUI - Beautiful, fast and modern React Native UI Library",
   description: "Make Your Android Screens Better.",
-  ogImage: "/solui.png",
+  ogImage: "https://solui-cyan.vercel.app/solui.png",
   author: "Satish Solera",
   siteUrl: "https://solui-cyan.vercel.app",
   creator: "@solui",
@@ -15,7 +15,7 @@ export const siteConfig = {
     description: "Make Your Android Screens Better.",
     images: [
       {
-        url: "/solui.png",
+        url: "https://solui-cyan.vercel.app/solui.png",
         width: 1200,
         height: 630,
         alt: "solUI",
@@ -26,7 +26,7 @@ export const siteConfig = {
     card: "summary_large_image",
     title: "solUI - Beautiful, fast and modern React Native UI Library",
     description: "Make Your Android Screens Better.",
-    image: "/solui.png",
+    image: "https://solui-cyan.vercel.app/solui.png",
     creator: "@solui",
   },
   links: {

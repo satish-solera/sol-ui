@@ -98,6 +98,15 @@
                 "target": "components/ui"
             }
         ]
+    },
+    {
+        "name": "item-cart",
+        "files": [
+            {
+                "path": "components/item-cart.tsx",
+                "target": "components/ui"
+            }
+        ]
     }
 
 ]

@@ -40,6 +40,15 @@ export const metadata: Metadata = {
     "UI Framework",
     "UI Design System",
   ],
+  twitter: siteConfig.twitter,
+  openGraph: siteConfig.openGraph,
+  authors: [
+    {
+      name: "SatishSolera",
+      url: "https://x.com/SatishSolera",
+    },
+  ],
+ 
 };
 
 export default async function RootLayout({
@@ -53,14 +62,13 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-
         <ThemeProvider attribute='class'>
 
-          <RootProvider>
             <Navbar />
+          <RootProvider>
             {children}
-            <Footer />
           </RootProvider>
+            <Footer />
 
         </ThemeProvider>
 

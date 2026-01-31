@@ -28,7 +28,7 @@ export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
                         </Text>
                     </Pressable>
 
-                    <View
+                    {/* <View
                         style={{ transform: [{ translateX: accepted ? 96 : 0 }] }}
                         className="absolute my-1 h-full w-20 shadow-sm border border-black/5 bg-white px-3 rounded-md"
                     >
@@ -36,7 +36,7 @@ export function InfoBadge({ info = "Buy Coffee" }: { info: string }) {
                         <View className="absolute inset-0 border-r border-black/50  right-8 top-1 bottom-1" />
                         <View className="absolute inset-0 border-r border-black/50  right-6 top-1 bottom-1" />
                         <View className="absolute inset-0 border-r border-black/50  right-4 top-1 bottom-1" />
-                    </View>
+                    </View> */}
 
                 </View>
             </View>

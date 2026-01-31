@@ -7,16 +7,24 @@ import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { ComponentPreview } from "@/src/components/ui/component-preview";
 import { SourceCode } from "@/src/components/ui/source-code";
+import { PackageManagers } from "@/src/components/docs/package-manager";
 
 <Tabs items={["Preview", "Code"]}>
   <Tab value="Preview">
     <ComponentPreview>
-     <iframe
-                            src="https://sol-ui-krma.vercel.app/demo/PopCardDemo"
-                            width={600}
-                            height={700}
-                            
-                        />
+    
+                           
+                         <iframe
+          
+            className="w-[360px] h-[700px] overflow-hidden rounded-2xl shadow-[0px_0px_30px_0px_rgba(38,38,38,0.10)]"
+            src="https://sol-ui-krma.vercel.app/demo/PopCardDemo"
+            title="InfoBadge demo"
+            style={{
+              transformOrigin: '0px 0px',
+              // transform: "",
+            }}
+            loading="lazy"
+          />
     </ComponentPreview>
   </Tab>
   <Tab value="Code">
@@ -73,20 +81,30 @@ export default () => {
 
 ## Installation
 
-<Tabs items={['CLI', 'Manual']}>
-  <Tab value="CLI">
-    ```bash
-    npx solui@latest add pop-card
-    ```
+<Tabs items={['Command', 'Manual']}>
+  <Tab value="Command">
+   
+    <PackageManagers
+  
+  commands={{
+    cli: "npx solui@latest add pop-card",
+   
+  }}
+/>
   </Tab>
   <Tab value="Manual">
     <Steps>
       <Step>
         ### Install dependencies
 
-        ```bash
-        npm install nativewind react-native-vector-icons
-        ```
+        <PackageManagers
+  commands={{
+    npm: "npm install  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    yarn: "yarn add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    pnpm: "pnpm add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+    bun: "bun add  nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0 --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11  react-native-vector-icons  ",
+  }}
+/>
       </Step>
       <Step>
         ### Copy the code
@@ -108,7 +126,7 @@ export default () => {
 
 
 ```tsx
-import PopCard from "@components/ui/pop-card";
+import PopCard from "@/components/ui/pop-card";
 
 export default function PopCardDemo() {
     return <PopCard />;
