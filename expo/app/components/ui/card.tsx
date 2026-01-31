@@ -33,7 +33,7 @@ export const CardContent = ({
   children,
   ...props
 }: CardContentProps) => (
-  <View className={className} {...props} style={[style.cardContent , props.style]}>
+  <View className={className} {...props} style={[style.cardContent , props.style ]}>
     {children}
   </View>
 );
@@ -41,33 +41,20 @@ export const CardContent = ({
 
 const style = StyleSheet.create({
   card: {
-    width:"80%",
-    height: "auto",
     paddingVertical: 10,
     paddingHorizontal: 10,
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "black",
   },
 
   cardHeader: {
-    width: "100%",
-    borderWidth: 0.5,
-    borderColor: "gray",
     paddingVertical: 10,
     paddingHorizontal: 5,
-    borderRadius: 2,
   },
 
   cardContent:{
     marginVertical: 5,
-    width: "100%",
-    height: 200,
-    borderWidth: 0.5,
-    borderColor: "gray",
     paddingVertical: 5,
     paddingHorizontal: 5,
-    borderRadius: 2,
+   
   }
 
 });
