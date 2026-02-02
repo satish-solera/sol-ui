@@ -3,8 +3,8 @@ import { Button } from "../components/ui/button";
 
 export const ComponentDemoSection = () => {
     return (
-        <section className="min-h-screen px-3 pt-20">
-            <div className="grid grid-cols-1 lg:grid-cols-3  mx-auto gap-4 ">
+        <section className="min-h-screen px-3 pt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2  mx-auto gap-4 ">
                 <Card />
                 <Card />
                 <Card />
@@ -20,7 +20,7 @@ export const Card = () => {
     const [showComponent, setShowComponent] = useState(false)
     return (
         
-            <div className="h-60 w-full border rounded-[4px] col-span-1 relative overflow-hidden group ">
+            <div className="h-60 w-96 border rounded-[4px] col-span-1 relative overflow-hidden group mx-auto ">
                 <div className=" h-[198px] overflow-hidden p-3">
                     <img src="/image2.jpg" />
                 </div>
