@@ -66,7 +66,7 @@ export const PackageManagers = ({
             <Tabs
                 value={selectedManager}
                 onValueChange={handleSelectionChange}
-                className="group mt-4 min-w-[300px] w-full overflow-x-auto"
+                className="group mt-4 w-80 lg:w-full overflow-x-auto"
             >
                 <TabsList>
                     {availableManagers.map(({ name, label, icon }) => (
