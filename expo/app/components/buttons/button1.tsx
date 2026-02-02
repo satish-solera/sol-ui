@@ -1,12 +1,16 @@
 
-import { Image, View } from "react-native"
+import {  Text } from "react-native"
 import {Button} from "../ui/button"
 import React from "react"
 
-export const Button1 = () =>{
+export const SimpleButton = ({title = "click me"} : {title :string}) =>{
     return(
-        <View className="flex flex-row gap-5 items-center">
-            <Image src={require('../../../src/assets/image3.jpg')} className="size-3"/><Button>Click</Button>
-        </View>
+            <Button className="bg-black border border-gray-50 ">
+                <Text className="text-white text-center ">
+                   {
+                    title
+                   }
+                </Text>
+            </Button>
     )
 }
