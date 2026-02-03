@@ -20,7 +20,7 @@ export const Card = () => {
     const [showComponent, setShowComponent] = useState(false)
     return (
         
-            <div className="h-60 w-96 border rounded-[4px] col-span-1 relative overflow-hidden group mx-auto ">
+            <div className="h-60 md:w-96 border rounded-[4px] col-span-1 relative overflow-hidden group mx-auto ">
                 <div className=" h-[198px] overflow-hidden p-3">
                     <img src="/image2.jpg" />
                 </div>

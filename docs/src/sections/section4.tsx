@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const TechnologyCardData = [
   {
-    logo: <ExpoLogo />,
+    logo: <ExpoLogo  width={200}/>,
     link: "",
   },
   {
@@ -41,8 +41,8 @@ export const TechnologyCard = ({
 }) => {
   return (
     <div className="w-full h-60 border rounded-[4px] ">
-      <div className="p-10 mx-auto">{icon}</div>
-      <Button className="pl-3 ml-3 size-10">
+      <div className="p-10 mx-auto dark:bg-white/80">{icon}</div>
+      <Button className="pl-3 ml-3 size-10 mt-1">
         <motion.p
           whileHover={{
             rotate: -20,

@@ -94,7 +94,7 @@ export default function Home() {
       </div>
       <div className="h-[500px] md:h-52"></div>
       <ComponentDemoSection/>
-      <div className="h-[500px] md:h-20"></div>
+      <div className="h-[200px] md:h-20"></div>
       <CommunitySection/>
       <div className="h-[500px] md:h-20"></div>
       <TechnologySection/>

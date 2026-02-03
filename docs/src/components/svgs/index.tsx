@@ -11,8 +11,8 @@ export const SoluiNameLogo = () => (
 
 // Expo logo 
 
-export const ExpoLogo = () =>(
-      <svg width="330" height="93" viewBox="0 0 330 93" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+export const ExpoLogo = ({width = 330 , height = 93} : {width ?: number , height ?: number}) =>(
+      <svg width={width} height={height} viewBox="0 0 330 93" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 <rect width="330" height="93" fill="url(#pattern0_6_82)"/>
 <defs>
 <pattern id="pattern0_6_82" patternContentUnits="objectBoundingBox" width="1" height="1">
