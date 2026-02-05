@@ -90,13 +90,13 @@ export default function Home() {
     <>
       <div className=' min-h-screen  '>
         <Hero />
-        <BrandInformationSection/>
+        {/* <BrandInformationSection/> */}
       </div>
-      <div className=" sm:h-[500px] lg:h-10"></div>
+      <div className=" sm:h-[500px] lg:h-5"></div>
       <ComponentDemoSection/>
-      <div className="h-[100px] md:h-10"></div>
+      {/* <div className="h-[100px] md:h-10"></div>
       <CommunitySection/>
-     
+      */}
       
       <div className="min-h-50">
       </div>

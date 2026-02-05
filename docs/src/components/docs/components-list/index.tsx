@@ -22,5 +22,10 @@ export const ListOfComponents = [
         componentDemoPhotoUrl: "/ui-demo-preview/item-cart-preview-1.jpg" ,
         componentDocsUrl: "docs/components/card"
     },
+    {
+        name: "profile cards" ,
+        componentDemoPhotoUrl: "/ui-demo-preview/item-cart-preview-1.jpg" ,
+        componentDocsUrl: "docs/components/profile-card"
+    },
 
 ]

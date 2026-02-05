@@ -7,9 +7,9 @@ import { Button } from "./ui/button";
 
 function Footer() {
   return (
-    <footer className="min-h-[400px]">
-      <div className="pl-3  min-h-screen pt-10 relative">
-        <div className="absolute bottom-0">
+    <footer className="min-h-[200px] border border-l-0 border-r-0 border-b-0">
+      <div className="pl-3 pt-20 md:pt-10 relative mt-10">
+        <div className="absolute bottom-0 ">
             <BottomFooter />
         </div>
       </div>
@@ -67,9 +67,9 @@ export const SocialLink = () => {
 
 export const BottomFooter = () => {
   return (
-    <div className="flex gap-2 ml-[23.5px] my-10">
+    <div className="flex flex-col md:flex-row gap-4 ml-[23.5px] pt-5">
       {[
-        { label: "2026", href: "/" , className:"border-none"},
+        { label: "2026", href: "/" , className:"border-none px-0 w-10" },
         {
           label: "sol-auth",
           href: "https://github.com/satish-solera/sol-auth",
@@ -80,8 +80,7 @@ export const BottomFooter = () => {
         return (
           <Link href={el.href} key={id}>
             <Button className={cn("" , el.className)}>
-
-            <span className="text-[20px] text-center mx-auto">{el.label}</span>
+            <span className={cn("text-[20px] text-center mx-auto" , id == 0 && "mx-0") }>{el.label}</span>
             </Button>
           </Link>
         );
