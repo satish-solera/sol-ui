@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { SearchLinearIcon } from "./icons/searchIcon";
 import * as React from "react";
-import { SoluiNameLogo } from "./svgs";
+import { SoluiNameLogo, SoluiNameLogoBlack } from "./svgs";
 import { GithubIcon } from "./icons";
 
 import { Button } from "./ui/button";
@@ -87,8 +87,15 @@ function Navbar() {
 
 <div className="">
 
-            <SoluiNameLogo />
+           <div className="dark:hidden">
+             <SoluiNameLogo />
+           </div>
+<div className="dark:block hidden">
+
+            <SoluiNameLogoBlack />
 </div>
+</div>
+
             
             <div className="flex items-center justify-between gap-4">
               <Link href="/docs/Installation">

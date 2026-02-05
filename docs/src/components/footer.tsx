@@ -93,14 +93,14 @@ export const BottomFooter = () => {
         </a>
       </div>
 
-      <div className="">
+      {/* <div className="">
         <Button className="w-full">
           <span className="mx-auto text-[20px]">
 
           Schedule meeting with us
           </span>
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
