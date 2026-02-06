@@ -4,13 +4,13 @@ import { Card, CardContent } from "../ui/card"
 import { Button } from "../ui/button"
 import AntDesign from "react-native-vector-icons/AntDesign";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-export const CardWithImage = () => {
+export const CardWithImage = ({uri = "https://images.pexels.com/photos/2270328/pexels-photo-2270328.jpeg" }: {uri : string}) => {
       const [liked, setLiked] = React.useState<boolean | undefined>(false);
     return (
 
         <Card className="w-96 rounded-md">
             <CardContent className="w-full h-96 relative">
-                <Image source={{ uri: "https://www.atlasandboots.com/wp-content/uploads/2019/05/mount-thor-most-beautiful-mountains-in-the-world.jpg" }} style={{
+                <Image source={{ uri: uri }} style={{
                     width: "100%",
                     height: "100%",
                     borderRadius: 20
