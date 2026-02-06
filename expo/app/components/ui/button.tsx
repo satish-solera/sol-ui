@@ -1,13 +1,13 @@
 import React from "react";
-import { Pressable , PressableProps,  StyleSheet , ViewProps} from "react-native";
+import { Pressable , PressableProps,  StyleSheet  , ViewProps} from "react-native";
 
-type ButtonProps = PressableProps & ViewProps & {
+type ButtonProps = PressableProps &  ViewProps & {
     className ? : string,
 }
 
-export const Button = ({children , ...props}: ButtonProps) =>{
+export const Button = ({ className, children , ...props}: ButtonProps) =>{
     return(
-        <Pressable style={[style.button , props.style]} {...props}>
+        <Pressable className={className}  {...props}  style={[style.button , props.style]}>
                 {
                     children
                 }

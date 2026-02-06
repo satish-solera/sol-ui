@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "react-native-web/dist";
+import "react-native-web/dist"
 import Navbar from "@/src/components/navbar";
 import Footer from "@/src/components/footer";
 import { RootProvider } from "fumadocs-ui/provider/next";
