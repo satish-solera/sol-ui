@@ -15,6 +15,11 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils/cn";
 import Hero from "@/src/sections/hero";
 import AnimationThemeComponent from "@/src/sections/animation-theme-component";
+import { BrandInformationSection } from "@/src/sections/brand-value-sections/section1";
+import { ComponentDemoSection } from "@/src/sections/section2";
+import { CommunitySection } from "@/src/sections/brand-value-sections/section3";
+import { TechnologySection } from "@/src/sections/section4";
+
 // import CardAnimate from "@/src/components/ui/card-animate";
 // import { ComponentPreview } from "@/src/components/docs/component-preview";
 // import { ComponentContainer } from "@/src/components/docs/component-container";
@@ -83,11 +88,16 @@ export default function Home() {
   const [activeId, setActiveId] = useState(2)
   return (
     <>
-      <div className=' min-h-screen flex items-center justify-center '>
+      <div className=' min-h-screen  '>
         <Hero />
+        {/* <BrandInformationSection/> */}
       </div>
-      <div className="min-h-50"></div>
-      <AnimationThemeComponent />
+      <div className=" sm:h-[500px] lg:h-5"></div>
+      <ComponentDemoSection/>
+      {/* <div className="h-[100px] md:h-10"></div>
+      <CommunitySection/>
+      */}
+      
       <div className="min-h-50">
       </div>
     </>

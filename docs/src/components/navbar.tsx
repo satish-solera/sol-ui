@@ -4,10 +4,12 @@ import { IconBrandGithub, IconMoon, IconSun } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-
+import { SearchLinearIcon } from "./icons/searchIcon";
 import * as React from "react";
-import { SearchLinearIcon } from "./icons";
+import { SoluiNameLogo, SoluiNameLogoBlack } from "./svgs";
+import { GithubIcon } from "./icons";
 
+import { Button } from "./ui/button";
 
 // Theme Toggle Component
 const ThemeToggle = () => {
@@ -25,13 +27,13 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
-      className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors text-foreground/70 hover:text-foreground"
+      className="flex items-center justify-center rounded-full hover:bg-black/5 transition-colors text-foreground/70 hover:text-foreground "
       aria-label="Toggle theme"
     >
       {theme == "light" ? (
-        <IconSun className="w-5 h-5" />
-      ) : (
         <IconMoon className="w-5 h-5" />
+      ) : (
+        <IconSun className="w-5 h-5" />
       )}
     </button>
   );
@@ -63,7 +65,7 @@ function Navbar() {
   const texts = ["beta", "0.0.1"];
 
   const [index, setIndex] = React.useState(0);
-
+  const [isView, setIsView] = React.useState(false);
   React.useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % texts.length);
@@ -75,50 +77,94 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="p-2 sticky top-0 z-1000 ">
-      <div className=" max-w-2xl md:max-w-5xl mx-auto  py-2 flex items-center justify-between bg-black/10 dark:bg-white/30 rounded-lg transition-opacity p-1 hover:opacity-80  cursor-pointer outline-solid outline-transparent">
-        <div className="flex gap-4 items-center lg:mx-20">
-          {/* logo */}
-          <Link href="/">
-            <h1 className="text-lg md:text-2xl font-bold">SolUI</h1>
-          </Link>
-          <button className="border rounded-md bg-black/5 px-2 dark:border-neutral-300 relative overflow-hidden">
-            <div className="relative">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={texts[index]} // String keys work since texts are unique
-                  initial={{ y: "100%", opacity: 0 }}
-                  animate={{ y: "0%", opacity: 1 }}
-                  exit={{ y: "-100%", opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="relative h-full flex items-center justify-center text-center w-10" // Full height, centered
+    <nav className="border border-l-0 border-r-0 border-t-0 border-b ">
+      <div className="sticky top-0 py-5 md:px-8 px-4">
+        {/* desktop nav */}
+        <div className="hidden lg:block">
+          <div className="flex items-center justify-between ">
+            {/* solui name logo  */}
+            
+
+<div className="">
+
+           <div className="dark:hidden">
+             <SoluiNameLogo />
+           </div>
+<div className="dark:block hidden">
+
+            <SoluiNameLogoBlack />
+</div>
+</div>
+
+            
+            <div className="flex items-center justify-between gap-4">
+              <Link href="/docs/Installation">
+              <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
+                <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+                  Docs
+                </p>
+              </Button>
+              </Link>
+              <Link href="https://github.com/satish-solera/sol-ui">
+              <motion.button
+                layout
+                className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center bg-[#FFBB00] text-white cursor-pointer"
+                onMouseEnter={() => setIsView(true)}
+                onMouseLeave={() => setIsView(false)}
                 >
-                  {texts[index]}
-                </motion.span>
-              </AnimatePresence>
+                {!isView && <p> Solui's Github</p>}
+                {isView && (
+                  <motion.span
+                    initial={{
+                      x: 0,
+                      scale: 0,
+                    }}
+                    animate={{
+                      x: "-100%",
+                      scale: [0.6, 1.02, 1],
+                    }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "linear",
+                    }}
+                    layout
+                    className="absolute right-7 mx-auto"
+                  >
+                    <GithubIcon />
+                  </motion.span>
+                )}
+              </motion.button>
+                    </Link>
+            <Button
+                
+                className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center"
+               
+              >
+                 <ThemeToggle />
+              </Button>
             </div>
-          </button>
+          </div>
         </div>
 
-        <div className="flex lg:mx-20 gap-4 items-center">
-          {/* navLinks */}
-          <ul>
-            <Link href="/docs/introduction">
-              <li>Docs</li>
-            </Link>
-          </ul>
-          {/* {searchButton} */}
-          <div className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors text-foreground/70 hover:text-foreground">
-            <Link href="https://github.com/satish-solera/sol-ui">
-              <IconBrandGithub size={18} />
-            </Link>
+        {/* smaller devices nav */}
+        <div className="block lg:hidden">
+          <div className="flex items-center justify-between ">
+            <SoluiNameLogo />
+            <div className="">
+              <motion.button
+                layout
+                className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-10 h-10  flex items-center text-center "
+                onMouseEnter={() => setIsView(true)}
+                onMouseLeave={() => setIsView(false)}
+              >
+                -
+              </motion.button>
+            </div>
           </div>
-          <h1>
-            <ThemeToggle />
-          </h1>
         </div>
       </div>
-    </div>
+    </nav>
+   
   );
 }
 
