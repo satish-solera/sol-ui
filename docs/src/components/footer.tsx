@@ -9,7 +9,7 @@ import { SolauthLogo } from "./svgs";
 function Footer() {
   return (
     <footer className="min-h-50 border border-l-0 border-r-0 border-b-0">
-      <div className="pl-3 pt-20 md:pt-10 relative mt-10">
+      <div className="pl-3 pt-20 md:pt-10 relative mt-14">
         <div className="absolute bottom-0 ">
             <BottomFooter />
         </div>

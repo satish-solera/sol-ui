@@ -1,13 +1,13 @@
 "use client";
 
-import { IconBrandGithub, IconMoon, IconSun } from "@tabler/icons-react";
+import {  IconMenu3, IconMoon, IconSun } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { SearchLinearIcon } from "./icons/searchIcon";
 import * as React from "react";
 import { SoluiNameLogo, SoluiNameLogoBlack } from "./svgs";
-import { GithubIcon } from "./icons";
+import { GithubIcon } from "./icons"
 
 import { Button } from "./ui/button";
 
@@ -83,64 +83,56 @@ function Navbar() {
         <div className="hidden lg:block">
           <div className="flex items-center justify-between ">
             {/* solui name logo  */}
-            
 
-<div className="">
+            <div className="">
+              <div className="dark:hidden">
+                <SoluiNameLogo />
+              </div>
+              <div className="dark:block hidden">
+                <SoluiNameLogoBlack />
+              </div>
+            </div>
 
-           <div className="dark:hidden">
-             <SoluiNameLogo />
-           </div>
-<div className="dark:block hidden">
-
-            <SoluiNameLogoBlack />
-</div>
-</div>
-
-            
             <div className="flex items-center justify-between gap-4">
               <Link href="/docs/Installation">
-              <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
-                <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
-                  Docs
-                </p>
-              </Button>
+                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
+                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+                    Docs
+                  </p>
+                </Button>
               </Link>
               <Link href="https://github.com/satish-solera/sol-ui">
-              <motion.button
-                layout
-                className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center bg-[#FFBB00] text-white cursor-pointer"
-                onMouseEnter={() => setIsView(true)}
-                onMouseLeave={() => setIsView(false)}
+                <motion.button
+                  layout
+                  className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center bg-[#FFBB00] text-white cursor-pointer"
+                  onMouseEnter={() => setIsView(true)}
+                  onMouseLeave={() => setIsView(false)}
                 >
-                {!isView && <p> Solui's Github</p>}
-                {isView && (
-                  <motion.span
-                    initial={{
-                      x: 0,
-                      scale: 0,
-                    }}
-                    animate={{
-                      x: "-100%",
-                      scale: [0.6, 1.02, 1],
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      ease: "linear",
-                    }}
-                    layout
-                    className="absolute right-7 mx-auto"
-                  >
-                    <GithubIcon />
-                  </motion.span>
-                )}
-              </motion.button>
-                    </Link>
-            <Button
-                
-                className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center"
-               
-              >
-                 <ThemeToggle />
+                  {!isView && <p> Solui's Github</p>}
+                  {isView && (
+                    <motion.span
+                      initial={{
+                        x: 0,
+                        scale: 0,
+                      }}
+                      animate={{
+                        x: "-100%",
+                        scale: [0.6, 1.02, 1],
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "linear",
+                      }}
+                      layout
+                      className="absolute right-7 mx-auto"
+                    >
+                      <GithubIcon />
+                    </motion.span>
+                  )}
+                </motion.button>
+              </Link>
+              <Button className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center">
+                <ThemeToggle />
               </Button>
             </div>
           </div>
@@ -149,22 +141,68 @@ function Navbar() {
         {/* smaller devices nav */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between ">
-            <SoluiNameLogo />
+            <div className="">
+              <div className="dark:hidden">
+                <SoluiNameLogo />
+              </div>
+              <div className="dark:block hidden">
+                <SoluiNameLogoBlack />
+              </div>
+            </div>
             <div className="">
               <motion.button
-                layout
-                className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-10 h-10  flex items-center text-center "
-                onMouseEnter={() => setIsView(true)}
-                onMouseLeave={() => setIsView(false)}
+                className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-10 h-10  flex items-center justify-center "
+                onClick={() => setIsView((prev) => !prev)}
               >
-                -
+                <motion.span
+                 initial={{
+                  rotate: 0
+                }}
+
+                whileTap={{
+                  rotate: -45
+                }}
+
+                transition={{
+                  duration: 0.3,
+                }}
+                className=""
+                >
+
+                <IconMenu3 />
+                </motion.span>
               </motion.button>
             </div>
           </div>
+          
+
+          {
+            isView && <div className="absolute bg-white dark:bg-black h-40 w-full border right-1 top-20 pl-3  ">
+            <div className="flex flex-col gap-2 pt-2">
+              <Link href="/docs/Installation">
+                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer ">
+                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+                    Docs
+                  </p>
+                </Button>
+              </Link>
+            <Link href="https://github.com/satish-solera/sol-ui">
+                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
+                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+                    Github
+                  </p>
+                </Button>
+              </Link>
+               <Button className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center">
+                <ThemeToggle />
+              </Button>
+            </div>
+          </div>
+          }
+          
         </div>
       </div>
     </nav>
-   
   );
 }
 
