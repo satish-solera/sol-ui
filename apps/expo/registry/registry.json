@@ -9,6 +9,71 @@
         ]
     },
     {
+        "name": "button1",
+        "files": [
+            {
+                "path": "components/button1.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "button2",
+        "files": [
+            {
+                "path": "components/button2.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "button3",
+        "files": [
+            {
+                "path": "components/button3.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "button4",
+        "files": [
+            {
+                "path": "components/button4.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "button5",
+        "files": [
+            {
+                "path": "components/button5.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
         "name": "profile-card",
         "files": [
             {
@@ -63,6 +128,62 @@
         ]
     },
     {
+        "name": "badge-1",
+        "files": [
+            {
+                "path": "components/badge1.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "badge-2",
+        "files": [
+            {
+                "path": "components/badge2.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
+        "name": "badge-3",
+        "files": [
+            {
+                "path": "components/badge3.tsx",
+                "target": "components/ui"
+            }
+             
+        ]
+    },
+    {
         "name": "discrete-tab",
         "files": [
             {
@@ -89,12 +210,85 @@
             }
         ]
     },
+    {
+        "name": "card1",
+        "files": [
+            {
+                "path": "components/card1.tsx",
+                "target": "components/ui"
+            },
+            {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            },
+            {
+                "path": "components/card.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "card2",
+        "files": [
+            {
+                "path": "components/card2.tsx",
+                "target": "components/ui"
+            },
+            {
+                "path": "components/card.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "card3",
+        "files": [
+            {
+                "path": "components/card3.tsx",
+                "target": "components/ui"
+            },
+            {
+                "path": "components/card.tsx",
+                "target": "components/ui"
+            },
+             {
+                "path": "components/button.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "card4",
+        "files": [
+            {
+                "path": "components/card4.tsx",
+                "target": "components/ui"
+            },
+            {
+                "path": "components/card.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
     
     {
         "name": "money-checkout",
         "files": [
             {
                 "path": "components/money-checkout.tsx",
+                "target": "components/ui"
+            }
+        ]
+    },
+    {
+        "name": "item-cart",
+        "files": [
+            {
+                "path": "components/item-cart.tsx",
                 "target": "components/ui"
             }
         ]
