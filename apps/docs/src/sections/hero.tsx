@@ -1,49 +1,50 @@
-
-"use client"
-import { motion } from 'motion/react'
-import Link from 'next/link'
-import React, { useState } from 'react'
+"use client";
+import { motion } from "motion/react";
+import Link from "next/link";
+import React, { useState } from "react";
+import { cn } from "@/lib/utils/cn";
+import { IconCheck, IconCopy } from "@tabler/icons-react";
+import {  NpmSmallIcon } from "../components/icons";
+import { Button } from "../components/ui/button";
 
 function Hero() {
-        const [text, setText] = useState('See UI')
+  const [text, setText] = useState("See UI");
+  
   return (
-       <div className=" mx-5 lg:mx-0">
-                    <h1 className="block mt-2 text-muted-foreground font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05] text-shadow-2xs">
-                        Provided By Roukhood
-                    </h1>
-                    <h1 className="text-4xl sm:text-2xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6 text-balance ">
-                        Make Your Android Screens Better
-                    </h1>
-                    <div className="flex items-center justify-center mx-auto">
-                        <div className="">
-                           <Link href='docs/introduction'>
-                            <motion.button className='py-2 border bg-black/10 border-neutral-300 text-white px-5 rounded-lg'>
-                                See UI
-                            </motion.button>
-                            <motion.button
-                                whileHover={{
-                                    scale: 1.1
-                                }}
+    <section>
+      <div className="pl-3 md:pl-20 min-h-screen pt-24">
+        <h1 className="md:w-[700px] tracking-tight">
+          <span className="font-semibold text-[30px] md:text-[54px]">
+            Provided By Roukhood
+          </span>
+          <br />
+          <span className="text-[20px] lg:text-[40px] text-cyan-900 dark:text-white/80">
+            Reusable UI Blocks, Components - Make your app UI faster.
+          </span>
+        </h1>
 
-                                transition={{
-                                    duration: 0.3
-                                }}
-                                className='py-2 bg-black border border-neutral-300 dark:bg-white dark:text-black max-w-30 text-white px-5 rounded-lg relative top-2 -left-[81px] tracking-tight cursor-pointer' onMouseEnter={() => {
-                                    setTimeout(() => {
-                                        setText('Use UI')
-                                    }, 400)
-                                }} onMouseLeave={() => setText('See UI')}>
-                                {
-                                    text
-                                }
-                            </motion.button>
-                           </Link>
-                        </div>
-
-
-                    </div>
-                </div>
-  )
+        <div className="mt-10 gap-4 flex items-center">
+          <Link href="/docs/components/badge">
+           <Button
+          
+          className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center justify-center bg-[#FFBB00] hover:bg-[#FFBB00]/90 text-white cursor-pointer"
+          >
+          <p>See UI</p>
+        </Button>
+          </Link>
+          <Link href="https://www.npmjs.com/package/solui">
+         <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px]   size-10 flex items-center justify-center group cursor-pointer gap-2">
+         
+                
+                <span className="w-5"><NpmSmallIcon/></span>
+               
+              </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;
+

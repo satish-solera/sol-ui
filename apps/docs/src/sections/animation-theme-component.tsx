@@ -5,11 +5,8 @@ import { cn } from "@/lib/utils/cn";
 import { motion } from "motion/react";
 
 const demoUrl = [
-  {
 
-    docsUrl: "/docs/button",
-    demoUrl: "https://sol-ui-krma.vercel.app/demo/ButtonDemo",
-  },
+ 
   {
     docsUrl: "/docs/discrete-tabs",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/DiscreteTabsDemo",
@@ -23,10 +20,17 @@ const demoUrl = [
     demoUrl: "https://sol-ui-krma.vercel.app/demo/CardDemo",
   },
   {
+
+   docsUrl: "/docs/button",
+   demoUrl: "https://sol-ui-krma.vercel.app/demo/ButtonDemo",
+ },
+  {
     docsUrl: "/docs/filter",
     demoUrl: "https://sol-ui-krma.vercel.app/demo/FilterDemo",
-    className: " h-[400px] md:col-span-2"
+    className: "  md:col-span-2",
+    iframeClass: "w-[600px]"
   },
+   
 ];
 function AnimationThemeComponent() {
   return (
@@ -43,7 +47,7 @@ function AnimationThemeComponent() {
       </div>
       <div className="grid  grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
         {demoUrl.map((el, id) => {
-          return <ComponentCard demoSrc={el.demoUrl} key={id} className={el.className} />
+          return <ComponentCard demoSrc={el.demoUrl} key={id} className={el.className} iframeClass={el.iframeClass} />
         })}
       </div>
     </div>
@@ -52,13 +56,26 @@ function AnimationThemeComponent() {
 
 export default AnimationThemeComponent;
 
-export const ComponentCard = ({ demoSrc , className}: { demoSrc: string , className ?: string}) => {
+export const ComponentCard = ({ demoSrc , className , iframeClass}: { demoSrc: string , className ?: string , iframeClass ?: string}) => {
   return (
-      <div className={cn("h-[600px] w-full flex items-center justify-center" , className)}>
-        <iframe
-          src={demoSrc}
-          className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10" )}
-        ></iframe>
+      <div className={cn("h-[600px] w-full flex items-center justify-center relative" , className)}>
+{/*          
+      //     src={demoSrc}
+      //     className={cn(" h-full w-full flex items-center justify-center m-auto  rounded-[15px] p-0.5 ring-1 ring-black/10 " )}
+      //   ></iframe> */}
+
+          <iframe
+            height="100%"
+            width="100%"
+            className={cn("overflow-hidden rounded-2xl shadow-[0px_0px_30px_0px_rgba(38,38,38,0.10)]" , iframeClass)}
+            src={demoSrc}
+            title="InfoBadge demo"
+            style={{
+              transformOrigin: '0px 0px',
+              // transform: "",
+            }}
+            loading="lazy"
+          />
       </div>
   );
 };
