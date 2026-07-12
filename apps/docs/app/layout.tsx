@@ -8,7 +8,7 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import { ThemeProvider } from "next-themes";
 import { siteConfig } from "../config/site";
 
-import "../app/globals.css";
+import "./globals.css";
 
 const inter = Inter({
   variable:"--font-inter",
@@ -57,7 +57,9 @@ export default async function RootLayout({
       <body
         className={`${inter.variable}  antialiased`}
       >
-        <ThemeProvider attribute="class">
+        <ThemeProvider
+        defaultTheme="system"
+        attribute="class">
           <Navbar />
           <div className="border border-b-0  border-t-0 mx-1 md:mx-3">
             <RootProvider>{children}</RootProvider>
