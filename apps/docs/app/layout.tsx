@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import "react-native-web/dist"
+
+import "react-native-web/dist";
 import Navbar from "@/src/components/navbar";
 import Footer from "@/src/components/footer";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { ThemeProvider } from "next-themes";
-import { siteConfig } from "./config/site";
+import { siteConfig } from "../config/site";
 
-
+import "../app/globals.css";
 
 const inter = Inter({
   variable:"--font-inter",
