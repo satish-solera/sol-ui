@@ -182,12 +182,3 @@
   height: 48px !important;
 }
 
-
-/* mesh gradient custom css */
-
-
-@media (max-width > 400) {
-  .mesh-gradient{
-    width: 450px
-  }
-}
