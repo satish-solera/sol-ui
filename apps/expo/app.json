@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "Magma-Application",
-    "slug": "Magma-Application",
+    "name": "sol-ui",
+    "slug": "sol-ui",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "scheme": "magma",
+    "scheme": "sol-ui",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",

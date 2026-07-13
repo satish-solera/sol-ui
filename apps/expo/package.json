@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "main": "expo-router/entry",
+  
   "scripts": {
     "dev": "expo start",
     "start": "expo start",
@@ -10,6 +11,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web"
   },
+ 
   "dependencies": {
     "@marceloterreiro/flash-calendar": "^2.0.0",
     "@react-navigation/bottom-tabs": "^7.4.1",
