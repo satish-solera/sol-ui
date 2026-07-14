@@ -10,12 +10,13 @@ import React from "react";
 function Hero() {
 
   const {resolvedTheme} = useTheme();
-  const [width , setWidth] = React.useState(window.innerWidth);
+  const [width , setWidth] = React.useState(0);
 
   React.useEffect(()=>{
     const handleResize  = () =>{
       setWidth(window.innerWidth);
     }
+    handleResize();
     window.addEventListener("resize", handleResize);
     return()=> window.removeEventListener("resize" , handleResize);
   } ,[]);
