@@ -138,7 +138,7 @@ function Hero() {
           }}
 
           transition={{
-            duration: width < 500 ? 5 : 30,
+            duration: 30,
             repeat: Infinity,
           }}
           className="flex  gap-3 ">
