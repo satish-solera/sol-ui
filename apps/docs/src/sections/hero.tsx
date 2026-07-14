@@ -28,7 +28,7 @@ function Hero() {
 
   if(width < 500){
      xPosition  = 100 ;
-     xEndPosition = -80;
+     xEndPosition = -800;
   }else{
     xPosition = 900,
     xEndPosition = -1000
