@@ -12,6 +12,7 @@ export const ComponentDemoSection = () => {
         {ListOfComponents.map((el, id) => {
           return (
             <Card
+            key={id}
               name={el.name}
               componentSrc={el.componentDocsUrl}
               imgSrc={el.componentDemoPhotoUrl}

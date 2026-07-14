@@ -1,6 +1,6 @@
 "use client";
 
-import {  IconMenu3, IconMoon, IconSun } from "@tabler/icons-react";
+import { IconMenu3, IconMoon, IconSun } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -25,17 +25,18 @@ const ThemeToggle = () => {
   }
 
   return (
-    <button
+    <Button
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
-      className="flex items-center justify-center rounded-full hover:bg-black/5 transition-colors text-foreground/70 hover:text-foreground "
+      className="py-[11px] w-fit border-none hover:bg-white dark:hover:bg-black px-1 py-1"
       aria-label="Toggle theme"
+      typeOfBtn={resolvedTheme == "light" ? "white" : "black"}
     >
       {theme == "light" ? (
         <IconMoon className="w-5 h-5" />
       ) : (
         <IconSun className="w-5 h-5" />
       )}
-    </button>
+    </Button>
   );
 };
 
@@ -43,14 +44,14 @@ const searchButton = (
   <button
     aria-label="Quick search"
     className="border px-3 border-default-200 rounded-lg text-small font-normal text-default-500 bg-transparent flex items-center py-[6px] gap-2"
-    //   endContent={
-    //     <Kbd
-    //       className="hidden text-xs rounded-full py-0.5 px-1.5 lg:inline-block"
-    //       keys={commandKey}
-    //     >
-    //       K
-    //     </Kbd>
-    //   }
+  //   endContent={
+  //     <Kbd
+  //       className="hidden text-xs rounded-full py-0.5 px-1.5 lg:inline-block"
+  //       keys={commandKey}
+  //     >
+  //       K
+  //     </Kbd>
+  //   }
   >
     <SearchLinearIcon
       className="text-base text-default-400 pointer-events-none shrink-0"
@@ -62,28 +63,18 @@ const searchButton = (
 );
 
 function Navbar() {
-  const texts = ["beta", "0.0.1"];
+
 
   const [index, setIndex] = React.useState(0);
   const [isView, setIsView] = React.useState(false);
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % texts.length);
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
 
   return (
-    <nav className="border border-l-0 border-r-0 border-t-0 border-b ">
-      <div className="sticky top-0 py-5 md:px-8 px-4">
+    <nav className="border border-l-0 border-r-0 border-t-0 border-b sticky top-0 bg-white/90 dark:bg-black/90 z-50">
+      <div className=" py-5 md:px-8 px-4">
         {/* desktop nav */}
         <div className="hidden lg:block">
           <div className="flex items-center justify-between ">
             {/* solui name logo  */}
-
             <div className="">
               <div className="dark:hidden">
                 <SoluiNameLogo />
@@ -92,48 +83,17 @@ function Navbar() {
                 <SoluiNameLogoBlack />
               </div>
             </div>
-
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-3">
               <Link href="/docs/Installation">
-                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
-                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
-                    Docs
-                  </p>
-                </Button>
+                <p>
+                  Docs
+                </p>
               </Link>
-              <Link href="https://github.com/satish-solera/sol-ui">
-                <motion.button
-                  layout
-                  className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center bg-[#FFBB00] text-white cursor-pointer"
-                  onMouseEnter={() => setIsView(true)}
-                  onMouseLeave={() => setIsView(false)}
-                >
-                  {!isView && <p> Solui's Github</p>}
-                  {isView && (
-                    <motion.span
-                      initial={{
-                        x: 0,
-                        scale: 0,
-                      }}
-                      animate={{
-                        x: "-100%",
-                        scale: [0.6, 1.02, 1],
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "linear",
-                      }}
-                      layout
-                      className="absolute right-7 mx-auto"
-                    >
-                      <GithubIcon />
-                    </motion.span>
-                  )}
-                </motion.button>
+              <Link
+                href="https://github.com/satish-solera/sol-ui">
+                <GithubIcon />
               </Link>
-              <Button className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center">
-                <ThemeToggle />
-              </Button>
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -155,51 +115,46 @@ function Navbar() {
                 onClick={() => setIsView((prev) => !prev)}
               >
                 <motion.span
-                 initial={{
-                  rotate: 0
-                }}
+                  initial={{
+                    rotate: 0
+                  }}
 
-                whileTap={{
-                  rotate: -45
-                }}
+                  whileTap={{
+                    rotate: -45
+                  }}
 
-                transition={{
-                  duration: 0.3,
-                }}
-                className=""
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  className=""
                 >
 
-                <IconMenu3 />
+                  <IconMenu3 />
                 </motion.span>
               </motion.button>
             </div>
           </div>
-          
+
 
           {
             isView && <div className="absolute bg-white dark:bg-black h-40 w-full border right-1 top-20 pl-3  ">
-            <div className="flex flex-col gap-2 pt-2">
-              <Link href="/docs/Installation">
-                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer ">
-                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+              <div className="flex flex-col gap-2 pt-2">
+                <Link href="/docs/Installation">
+                  <p className="text-24 font-medium group-hover:-translate-y-px transition-all ease-linear  ">
                     Docs
                   </p>
-                </Button>
-              </Link>
-            <Link href="https://github.com/satish-solera/sol-ui">
-                <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-20 h-10 relative flex items-center justify-center group cursor-pointer">
-                  <p className="text-24 font-semibold group-hover:-translate-y-px transition-all ease-linear  ">
+                </Link>
+                <Link href="https://github.com/satish-solera/sol-ui">
+                  <p className="text-24 font-medium group-hover:-translate-y-px transition-all ease-linear  ">
                     Github
                   </p>
-                </Button>
-              </Link>
-               <Button className="text-24 font-semibold border  py-2 px-3 rounded-[4px] size-10  flex items-center justify-center">
+                </Link>
                 <ThemeToggle />
-              </Button>
+
+              </div>
             </div>
-          </div>
           }
-          
+
         </div>
       </div>
     </nav>

@@ -1,50 +1,178 @@
 "use client";
-import { motion } from "motion/react";
+
 import Link from "next/link";
-import React, { useState } from "react";
-import { cn } from "@/lib/utils/cn";
-import { IconCheck, IconCopy } from "@tabler/icons-react";
-import {  NpmSmallIcon } from "../components/icons";
+import { NpmSmallIcon } from "../components/icons";
 import { Button } from "../components/ui/button";
+import { useTheme } from "next-themes";
+import { motion } from "motion/react";
+import React from "react";
 
 function Hero() {
-  const [text, setText] = useState("See UI");
-  
-  return (
-    <section>
-      <div className="pl-3 md:pl-20 min-h-screen pt-24">
-        <h1 className="md:w-[700px] tracking-tight">
-          <span className="font-semibold text-[30px] md:text-[54px]">
-            Provided By Roukhood
-          </span>
-          <br />
-          <span className="text-[20px] lg:text-[40px] text-cyan-900 dark:text-white/80">
-            Reusable UI Blocks, Components - Make your app UI faster.
-          </span>
-        </h1>
 
-        <div className="mt-10 gap-4 flex items-center">
+  const {resolvedTheme} = useTheme();
+  const [width , setWidth] = React.useState(0);
+
+  React.useEffect(()=>{
+    const handleResize  = () =>{
+      setWidth(window.innerWidth);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return()=> window.removeEventListener("resize" , handleResize);
+  } ,[]);
+
+
+  let xPosition = 0;
+  let xEndPosition = 0;
+
+
+  if(width < 500){
+     xPosition  = 100 ;
+     xEndPosition = -800;
+  }else{
+    xPosition = 900,
+    xEndPosition = -1000
+  }
+ 
+  const dummyHeroData = [
+    {
+      name: "Music ui",
+      img: "/Hero-1.png",
+
+    },
+
+    {
+      name: "Transections ui",
+      img: "/Hero-3.png",
+    },
+    {
+      name: "bank ui",
+      img: "/Hero-4.png",
+
+    },
+  ]
+
+  return (
+    <section className="min-h-screen h-full w-full pt-10 flex flex-col justify-between  items-center  ">
+    
+      <div className="flex flex-col gap-3 justify-center items-center pb-10 md:pb-0">
+        <motion.h1
+          initial={{
+            opacity: 0
+          }}
+          animate={{
+            opacity: 1
+          }}
+          className="font-serif text-[2.5rem]/[2.75rem] tracking-[-0.8px] text-text-main lg:text-[3.125rem]/[2.25rem] lg:tracking-[-2px] -pl-1 text-center md:text-start">
+          With well crafted pixels to
+        </motion.h1>
+
+        <motion.p
+          initial={{
+            opacity: 0
+          }}
+          animate={{
+            opacity: 1
+          }}
+          transition={{
+            delay: 0.2
+          }}
+          className="md:text-lg/6 text-[#08090a99] dark:text-[#ffffffb3] text-center">
+          Reusable & Intractive UI blocks and components <br />for{" "}
+          <span className="font-medium text-black dark:text-white ">apps</span> and{" "}
+          <span className="font-medium text-black dark:text-white">web</span>.
+        </motion.p>
+
+        <motion.div
+
+          initial={{
+            opacity: 0
+          }}
+          animate={{
+            opacity: 1
+          }}
+
+          transition={{
+            delay: 0.5
+          }}
+
+          className="flex gap-3 items-center">
           <Link href="/docs/components/badge">
-           <Button
-          
-          className="text-24 font-semibold border py-2 px-3 rounded-[4px] w-32 h-10   relative flex items-center justify-center bg-[#FFBB00] hover:bg-[#FFBB00]/90 text-white cursor-pointer"
-          >
-          <p>See UI</p>
-        </Button>
+            <Button
+              aria-label="Get started"
+              typeOfBtn={resolvedTheme == "dark" ? "white": "black"}
+              className=" ">
+              <p>Get started</p>
+            </Button>
           </Link>
           <Link href="https://www.npmjs.com/package/solui">
-         <Button className="text-24 font-semibold border py-2 px-3 rounded-[4px]   size-10 flex items-center justify-center group cursor-pointer gap-2">
-         
-                
-                <span className="w-5"><NpmSmallIcon/></span>
-               
-              </Button>
+            <Button
+             typeOfBtn={resolvedTheme == "light" ? "white": "black"}
+              aria-label="npm icon"
+              className="py-[11px]">
+              <NpmSmallIcon />
+            </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
+
+      <motion.div
+
+        initial={{
+          opacity: 0
+        }}
+        animate={{
+          opacity: 1
+        }}
+
+        transition={{
+          delay: 0.7
+        }}
+        className="w-full overflow-hidden">
+        <motion.div
+          initial={{
+            x: xPosition,
+          }}
+          animate={{
+            x: [xPosition, xEndPosition],
+          }}
+
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+          }}
+          className="flex  gap-3 ">
+          {
+            dummyHeroData.map((el, id) => {
+              return <WorkDemoScroller
+                name={el.name}
+                img={el.img}
+                key={id} />
+            })
+          }
+        </motion.div>
+      </motion.div>
+
     </section>
   );
 }
 
 export default Hero;
 
+
+
+export const WorkDemoScroller = ({ img, name }: { img: string, name: string }) => {
+  return (
+    <div className="">
+      <div className="h-90 w-90 overflow-hidden">
+        <img
+          alt={name}
+          draggable={false}
+          src={img}
+          className="w-full h-full object-cover rounded-[2px]"
+        />
+      </div>
+      <p className="text-center text-[#08090a99] dark:text-[#ffffffb3] select-none">{name}</p>
+    </div>
+  )
+}
