@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
+@import "@sol-ui/bank-kit/styles.css";
+
+/* Fallback scan path (relative to this file) for bank-kit Tailwind classes */
+@source "../../packages/bank-kit-later/src/**/*.{js,ts,jsx,tsx}";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

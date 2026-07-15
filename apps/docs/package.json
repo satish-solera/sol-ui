@@ -11,6 +11,7 @@
     "build:registry": "npx tsx scripts/build-registry.mts"
   },
   "dependencies": {
+    "@sol-ui/bank-kit": "*",
     "@base-ui/react": "^1.0.0",
     "@paper-design/shaders-react": "^0.0.71",
     "@radix-ui/react-tabs": "^1.1.13",
