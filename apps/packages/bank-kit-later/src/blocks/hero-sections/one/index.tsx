@@ -1,9 +1,7 @@
-import { Beacon } from "../../../components/svgs/beacon";
-import { Cisco } from "../../../components/svgs/cisco";
 
-import { Vercel } from "../../../components/svgs/vercel";
+import { Vercel , Cisco , Beacon } from "../../../components/svgs";
+
 import Header from "./header";
-
 
 export function HeroOne() {
     const logoList = [
@@ -26,19 +24,19 @@ export function HeroOne() {
                 <div className="pt-20">
                     <h1 className="text-4xl/[3rem] ">Payment <span className="italic text-blue-600">infrastrcutre </span> that handling</h1>
                     <p className="text-[#08090a99]">your business paymets, billing and many more securly.</p>
-                    <div className="flex gap-3 py-3">
+                    <div className="flex gap-1 py-3">
 
-                        <button className="bg-blue-700 hover:bg-blue-700/90 text-white font-medium px-3 py-1 rounded-md cursor-pointer">
+                        <button className="bg-blue-700 hover:bg-blue-700/90 text-white  px-3 py-1 rounded-md cursor-pointer">
                             Try demo
                         </button>
-                        <button className="border border-blue-100 font-medium px-3 py-1 rounded-md cursor-pointer hover:bg-blue-50">
+                        <button className="border border-blue-100 font-medium px-3 py-1 cursor-pointer rounded-md hover:bg-blue-50">
                             Connect your payments
                         </button>
                     </div>
 
                 </div>
 
-                <div className="mt-14 flex gap-3 mx-auto w-full h-full justify-center  items-center border border-blue-100 p-2 rounded-md">
+                <div className="mt-14 flex gap-1 mx-auto w-full h-full justify-center  items-center border border-blue-100 p-[2.5px] rounded-md">
                     {
                                     logoList.map((el , id)=>{
                                     return(

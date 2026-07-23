@@ -1,9 +1,9 @@
 
-export default function Header (){
+export default function Header(){
     return(
         <header>
-            <nav className="flex justify-between items-center px-4 border border-blue-100 py-2 rounded-md" >
-                    <p className="font-semibold font-serif select-none">sola</p>
+            <nav className="flex justify-between items-center border border-blue-100 rounded-md p-[2px]" >
+                    <p className="font-semibold font-serif select-none pl-2">sola</p>
                     <ul className="flex gap-3 items-center">
                     {
                         ["Home" , "Pricing" , "About"].map((el , id)=>{
@@ -23,7 +23,7 @@ export default function Header (){
                     } 
                     </ul>
 
-                    <button className="bg-blue-700 hover:bg-blue-700/90 text-white font-medium px-3 py-1 rounded-md cursor-pointer">
+                    <button className="bg-blue-700 hover:bg-blue-700/90 text-white px-3 py-1 rounded-[4px] cursor-pointer">
                         Sign in
                     </button>
                 </nav>
