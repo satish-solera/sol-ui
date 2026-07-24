@@ -40,10 +40,9 @@ function PlayIcon({ className }: { className?: string }) {
 
 export function HeroTwo() {
   return (
-    <section className="relative min-h-screen overflow-hidden  text-[#0C0A09]">
+    <section className="relative min-h-screen overflow-hidden  text-[#0C0A09] max-w-6xl">
       <Header/>
-      <div className="relative mx-auto w-full max-w-6xl px-6 pb-5 pt-20 select-none">
-        <div className="">
+      <div className="relative mx-auto w-full  px-6 pb-5 pt-20 select-none">
           <div className="max-w-xl mx-auto">
             <div className="flex flex-col">
             <div className="w-fit inline-flex items-center justify-center rounded-[6px] border border-black/10  px-2 py-px text-[11px] font-medium uppercase tracking-[0.14em] mx-auto  ">
@@ -60,14 +59,14 @@ export function HeroTwo() {
 
                <div className="mt-4 flex flex-wrap items-center gap-3 justify-center">
               <button
-                className="active:scale-[101%] transform-gpu will-change-transform  cursor-pointer group flex items-center gap-1 rounded-[6px] bg-[#0C0A09] hover:bg-[#0C0A09]/90 px-3.5 py-[11px] text-[14px] font-medium text-white  transition-all duration-200  hover:bg-[#1C1917] active:translate-y-0"
+                className="active:scale-[101%] transform-gpu will-change-transform  cursor-pointer group flex items-center gap-1 rounded-[6px] bg-[#0C0A09] hover:bg-[#0C0A09]/90 px-3.5 py-2 text-[16px] font-medium text-white  transition-all duration-200  hover:bg-[#1C1917] active:translate-y-0"
                 type="button"
               >
                 <p className="-mt-[3px]">Open an account</p>
                 <ArrowRightIcon className="transition-transform duration-200 group-hover:translate-x-0.5" />
               </button>
               <button
-                className=" active:scale-[101%] transform-gpu will-change-transform delay-100 cursor-pointer inline-flex items-center gap-2 rounded-[6px] border border-[#E7E5E4] bg-white px-3.5 py-2 text-[14px] font-medium text-[#44403C] transition-all duration-200 hover:border-[#D6D3D1] hover:bg-[#FAFAF9] "
+                className=" active:scale-[101%] transform-gpu will-change-transform delay-100 cursor-pointer inline-flex items-center gap-2 rounded-[6px] border border-[#E7E5E4] bg-white px-3.5 py-2 text-[13px] font-medium text-[#44403C] transition-all duration-200 hover:border-[#D6D3D1] hover:bg-[#FAFAF9] "
                 type="button"
               >
                 <span className=" inline-flex size-5 items-center justify-center rounded-[6px] bg-[#F5F5F4] text-[#57534E]">
@@ -81,8 +80,7 @@ export function HeroTwo() {
            
 
          
-          </div>
-        </div>  
+          </div> 
       </div>
     </section>
   );

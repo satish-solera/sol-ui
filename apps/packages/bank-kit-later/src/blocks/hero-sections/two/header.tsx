@@ -6,7 +6,7 @@ import { Hamburger } from "../../../components/svgs";
 export default function Header() {
   const [smallNav, setSmallNav] = React.useState<boolean>(false);
   return (
-    <header className="flex items-center justify-between bg-white/70 px-2 py-1 ">
+    <header className="flex items-center justify-between bg-white/70 px-2 py-1 max-w-6xl">
       <p className="font-serif text-[15px] font-semibold tracking-[-0.02em]">
         sola
       </p>

@@ -186,3 +186,16 @@
   height: 48px !important;
 }
 
+/* repeating linear gradients */
+
+.bg-grid-red{
+  background:repeating-linear-gradient(
+    45deg , rgb(249, 10, 10) 0px , rgb(255, 1, 1) 2px , transparent 1px , transparent 10px
+  )
+}
+
+.bg-grid-green{
+  background:repeating-linear-gradient(
+    45deg , rgb(195, 233, 199) 0px , rgb(181, 218, 185) 2px , transparent 2px , transparent 10px
+  )
+}
