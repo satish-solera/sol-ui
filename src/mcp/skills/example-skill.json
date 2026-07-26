@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "id": "example-skill",
+    "name": "Example Skill",
+    "version": "1.0.0",
+    "description": "This is an example skill demonstrating the skill file format",
+    "author": "sol-ui",
+    "tags": ["example", "template"],
+    "category": "utility"
+  },
+  "input": {
+    "parameters": [
+      {
+        "name": "text",
+        "type": "string",
+        "description": "Input text to process",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "object",
+        "description": "Optional processing options",
+        "required": false
+      }
+    ]
+  },
+  "output": {
+    "type": "string",
+    "description": "Processed output text"
+  }
+}
