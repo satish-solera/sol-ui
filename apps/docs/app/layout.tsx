@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
+    
+  },
+  icons:{
+icon:"/solui-logo.svg"
   },
   description: siteConfig.description,
   keywords: [
@@ -60,7 +64,7 @@ export default async function RootLayout({
         <ThemeProvider
         defaultTheme="system"
         attribute="class">
-          <Navbar />
+          <Navbar/>
           <div className="border border-b-0  border-t-0 mx-1 md:mx-3">
             <RootProvider>{children}</RootProvider>
           <Footer />
