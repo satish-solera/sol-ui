@@ -15,19 +15,8 @@
 
 ---
 
-## ✨ Features
 
-- 🎨 **Premium Design** - Carefully crafted, production-ready components with accessibility in mind
-- 📦 **Copy & Paste** - Designed for easy integration into existing projects
-- 🎯 **Fully Customizable** - Flexible components that adapt to your design system
-- 📱 **Multi-Platform** - Works seamlessly on React Native, Expo, and web applications
-- 🔧 **Type Safe** - Built with TypeScript for better developer experience
-- 🚀 **Optimized Performance** - Lightweight and performant component library
-- 📖 **Comprehensive Docs** - Interactive documentation with live component previews
-
----
-
-## 📁 Project Structure
+##  Project Structure
 
 This is a **monorepo** powered by [Turbo](https://turbo.build/repo) with the following structure:
 
@@ -54,7 +43,7 @@ Each package in the `packages/` directory contains reusable UI components and ut
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -104,7 +93,7 @@ npm run lint
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 Visit the [official documentation](https://solui-cyan.vercel.app) for:
 - Component API reference
@@ -115,7 +104,7 @@ Visit the [official documentation](https://solui-cyan.vercel.app) for:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React** 19+ - UI library
 - **React Native** 0.81+ - Cross-platform mobile framework
@@ -128,7 +117,7 @@ Visit the [official documentation](https://solui-cyan.vercel.app) for:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
 
@@ -149,20 +138,20 @@ Please read our [Contribution Guidelines](CONTRIBUTING.md) for detailed informat
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ☕ Support the Project
+## Support the Project
 
 If you find solUI helpful, please consider:
 
-- ⭐ **Giving it a star** on GitHub
-- 🐦 **Sharing it** with your network
-- 💬 **Providing feedback** on [discussions](https://github.com/Roukhood/sol-ui/discussions)
-- ☕ **Buying me a coffee**
+- **Giving it a star** on GitHub
+- **Sharing it** with your network
+-  **Providing feedback** on [discussions](https://github.com/Roukhood/sol-ui/discussions)
+- **Buying me a coffee**
 
 <a href="https://www.buymeacoffee.com/satishsolen">
   <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=satishsolen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&font_size=16&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" />
@@ -170,11 +159,11 @@ If you find solUI helpful, please consider:
 
 ---
 
-## 📞 Get in Touch
+## Get in Touch
 
-- 💬 [GitHub Discussions](https://github.com/Roukhood/sol-ui/discussions) - Ask questions and share ideas
-- 🐛 [Report Issues](https://github.com/Roukhood/sol-ui/issues) - Bug reports and feature requests
-- 📖 [Documentation](https://solui-cyan.vercel.app) - Learn more about the project
+- [GitHub Discussions](https://github.com/Roukhood/sol-ui/discussions) - Ask questions and share ideas
+- [Report Issues](https://github.com/Roukhood/sol-ui/issues) - Bug reports and feature requests
+- [Documentation](https://solui-cyan.vercel.app) - Learn more about the project
 
 ---
 
