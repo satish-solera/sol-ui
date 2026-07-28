@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "react-native-web/dist";
-import Navbar from "@/src/components/navbar";
-import Footer from "@/src/components/footer";
+
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { ThemeProvider } from "next-themes";
 import { siteConfig } from "../config/site";
@@ -64,10 +63,10 @@ export default async function RootLayout({
         <ThemeProvider
         defaultTheme="system"
         attribute="class">
-          <Navbar/>
-          <div className="border border-b-0  border-t-0 mx-1 md:mx-3">
+         
+          <div className=" mx-1 md:mx-0">
             <RootProvider>{children}</RootProvider>
-          <Footer />
+          
           </div>
         </ThemeProvider>
       </body>

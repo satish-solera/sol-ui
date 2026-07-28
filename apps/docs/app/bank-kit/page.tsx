@@ -24,7 +24,7 @@ export default function BankKitPage() {
               data-slot="button"
               data-variant="default"
               data-size="default"
-              className="bg-background-inverse text-foreground-inverse flex items-center justify-center bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3  [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4  gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] rounded-lg"
+              className="bg-background-inverse text-foreground-inverse hover:bg-(--hover-primary) active:bg-(--hover-primary) flex items-center justify-center bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3  [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4  gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] rounded-lg"
               href="/bank-kit/overview"
             >
               <p className="pb-[2.5px]">Explore more</p>
@@ -64,7 +64,8 @@ export default function BankKitPage() {
         <div className=" mx-[10%]">
           <HeroTwo />
         </div>
-      </div>
+      </div> 
+
 
       
     </section>

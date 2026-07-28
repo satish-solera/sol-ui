@@ -5,7 +5,6 @@ export default function Home() {
   return (
       <div className=" min-h-screen px-2 md:px-14 ">
         <Hero />
-
         <ComponentDemoSection />
       </div>
   );
