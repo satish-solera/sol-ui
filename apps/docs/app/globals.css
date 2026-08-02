@@ -14,6 +14,7 @@
   --hover-primary:  hsl(0, 0%, 0% , 80%);
   --hover-secondary: hsl(0, 0%, 0% , 3%);
   --text-color-primary : #08090a99;
+  --ring : #97979799;
 }
 
 @theme inline {
@@ -29,6 +30,8 @@
   --hover-secondary: var(--hover-secondary);
 
   --text-primary: var(--text-color-primary);
+
+  --ring-primary: var(--ring)
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -61,7 +64,7 @@
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: #1a1a1a;
   --input: #1a1a1a;
-  --ring: #1a1a1a;
+  --ring: #c22424;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);

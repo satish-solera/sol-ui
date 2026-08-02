@@ -39,7 +39,7 @@ className , withHandle , ...props
         >
             {
                 withHandle && (
-                    <div className="z-10 flex h-4 w-3 items-center justify-center rounded-xs border">
+                    <div className=" absolute z-50 flex h-4 w-3 items-center justify-center rounded-xs border ">
                         <IconGripVertical />
                     </div>
                 )

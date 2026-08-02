@@ -33,11 +33,10 @@ const BlockPreview = ({src , idx} : {src : string , idx : any}) =>{
                    
                   </ResizablePanel>
                   <ResizableHandler 
-                  className="relative w-3  after:absolute after:top-1/2"
+                  className="relative w-3  rounded-[min(var(--radius-2xl),24px)] after:absolute after:top-1/2"
                   />
                   <ResizablePanel defaultSize="0%" minSize="0%"/>
-
-                </ResizablePanelGroup>
+</ResizablePanelGroup>
     )
 }
 
