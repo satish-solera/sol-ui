@@ -1,57 +1,67 @@
 "use client";
 import * as React from "react";
 import {
-  IconHelp,
-  IconHome,
   IconLayoutSidebarFilled,
-  IconNotification,
-  IconSettings,
-  IconTransfer,
+ 
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils/cn";
 import { registry } from "@sol-ui/bank-kit";
 import Link from "next/link";
 
+
+type RegistryItem ={
+  title : string,
+  category: string,
+  slug: string
+}
+
 export const SideBarDocs = () => {
   const [sideBarIsOpen, setSideBarIsOpen] = React.useState<boolean>(true);
+
+  const grouped: Record<string, RegistryItem[]> = {};
+
+  registry.forEach((item)=>{
+    // creating category if dont present in grouped
+    if(!grouped[item.category]){
+      grouped[item.category] = [];
+    }
+    grouped[item.category].push(item);
+  })
+
   return (
-    <div className="w-full min-h-screen max-w-sm flex gap-4 overflow-hidden">
+    <div className="sticky top-[calc(7rem+0.6rem)] z-30 hidden h-[calc(100svh-10rem)] overflow-hidden overscroll-none lg:flex">
+       <div className="pointer-events-none absolute top-0 right-0 left-0 h-10 bg-linear-to-b from-background to-transparent z-10" />
+       <div className="pointer-events-none absolute bottom-0 right-0 left-0 h-10 bg-linear-to-t from-background to-transparent z-10" />
       <div
         className={cn(
-          sideBarIsOpen
-            ? "min-h-screen w-58 h-full relative border rounded-lg pb-5 transition-all "
-            : "min-h-screen w-10 h-full relative border rounded-lg transition-all pb-5 ",
-        )}
-      >
-        <div
-          onClick={(e) => {
-            e.stopPropagation();
-            setSideBarIsOpen((prev) => !prev);
-            
-          }}
-          className={cn(
-            sideBarIsOpen
-              ? "absolute right-3 top-2   z-10"
-              : "absolute top-2 right-2.5 z-10",
-          )}
-        >
-          <IconLayoutSidebarFilled size={16} />
-        </div>
-
+             "w-80  relative border-x py-5 transition-all scroll-smooth overflow-y-scroll scrollbar-none "
+        )}>
          
         {sideBarIsOpen && (
-          <div className="pt-8 px-1 relative">
-            {registry.map((el, id) => {
+        <div className=" overflow-hidden">
+            {Object.entries(grouped).map(([category , item ]) => {
               return (
-                <Link key={el.slug + id} href={`/bank-kit/components/${el.slug}`}>
-                  <div
-                    key={id}
-                    data-slot="heading"
-                    className="pl-2 py-2 text-neutral-600 text-sm flex items-center gap-2 hover:bg-black/5 active:bg-black/5 hover:text-black active:translate-y-px select-none transition-all whitespace-nowrap rounded-lg"
-                  >
-                    {el.title}
-                  </div>
-                </Link>
+                <div key={category} className="">
+                <div data-slot="card-title" className="text-md font-medium my-1 pb-2 pl-6 ">
+                  {category}
+                </div>
+                 {
+                  item.map((el , id)=>{
+                    return(
+                      <div
+                      
+                        data-slot="heading"
+                        className="pl-8 py-2 text-(--text-primary) hover:text-foreground text-sm flex items-center gap-2 active:translate-y-px select-none transition-all whitespace-nowrap rounded-lg"
+                      >
+                      <Link key={id} href={`/bank-kit/components/${el.slug}`}>
+                        {el.title}
+                         </Link>
+                      </div>
+                    
+                    )
+                  })
+                 }
+                </div>
               );
             })}
           </div>

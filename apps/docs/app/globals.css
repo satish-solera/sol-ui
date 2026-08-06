@@ -89,6 +89,11 @@
 }
 
 
+/* hide scrollbar */
+.scrollbar-none::-webkit-scrollbar{
+  scrollbar-width: none;
+  display: none;
+}
 
 
 /* css for the animate the cards */

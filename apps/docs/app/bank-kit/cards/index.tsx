@@ -6,6 +6,7 @@ import { History } from "./payment-history";
 import { PaymentRequest } from "./payment-request";
 import { Services } from "./services";
 import { SideBar } from "./side-bar";
+import { PaymentThree } from "@sol-ui/bank-kit/blocks";
 
 
 export function CardsDemo (){
@@ -42,7 +43,7 @@ export function CardsDemo (){
 
                 <CardSkelleton className="py-10 px-5 hidden lg:block ">
 
-                    <Chart/>
+                    <PaymentThree/>
                 </CardSkelleton>
                 <CardSkelleton className="py-4 px-4 hidden lg:block">
 

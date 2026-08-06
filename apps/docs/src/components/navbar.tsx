@@ -1,7 +1,7 @@
 "use client";
 
 import { IconMenu3, IconMoon, IconSun } from "@tabler/icons-react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { SearchLinearIcon } from "./icons/searchIcon";

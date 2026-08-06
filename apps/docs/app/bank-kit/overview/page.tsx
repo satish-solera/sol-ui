@@ -1,14 +1,8 @@
 import { TabPanel } from "@/app/view/tooltips/tab-panal";
 import BlockPreview from "@/src/components/docs/docs-blocks-renderer/block-preview";
-import IframeRenderer from "@/src/components/docs/docs-blocks-renderer/iframe-block-renderer";
-import {
-  ResizableHandler,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/src/components/docs/resizable";
-import HeroOne, { registry } from "@sol-ui/bank-kit";
+import  { registry } from "@sol-ui/bank-kit";
 
-import Link from "next/link";
+
 function Overview() {
   return (
     <div className="flex flex-col gap-10 ">
@@ -27,7 +21,7 @@ function Overview() {
               </div>
             </div>
           </div>
-          //    </Link>
+        
         );
       })}
     </div>

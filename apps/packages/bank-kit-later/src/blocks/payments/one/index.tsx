@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 const conversions = [
     {
         to : "hi",
@@ -8,7 +7,7 @@ const conversions = [
     },
     {
         to : "i need money",
-        from : "how much ? , i needd",
+        from : "how much ?",
     },
     
     {
@@ -19,12 +18,9 @@ const conversions = [
 ]
 function Payment() {
   const [isPayment, setIsPayment] = React.useState<boolean>(true);
-
-  
-
   return (
     <div className="w-full max-w-sm  flex items-center justify-center  rounded-2xl">
-      <div className="w-full relative h-80 max-w-[20rem] bg-background text-foreground border rounded-2xl ">
+      <div className="w-full relative h-84 max-w-[20rem] bg-background text-foreground border rounded-2xl ">
         <div className="pl-2 py-2 flex items-center gap-2 border-b bg-(--hover-secondary)/40">
           <button className="flex items-center justify-center size-5 text-sm active:translate-y-px transition-all ">
             <svg
@@ -50,30 +46,22 @@ function Payment() {
             Satish
           </span>
         </div>
-      
-        <div className="flex-col justify-between px-3 overflow-hidden overflow-y-scroll h-40 mt-3">
+        <div className="flex-col justify-between px-3 overflow-hidden overflow-y-scroll h-44 mt-3">
                 {
                     conversions.map((el , id) =>{
                         return(
                            
-                            <div className="grid grid-cols-2 grid-rows-2 pt-5">
-                            
-                            <span className="select-none border h-fit w-fit px-2 rounded-md bg-(--hover-secondary)/40  hover:bg-(--hover-secondary)">{el.from}</span>
-
-                            <div className="row-start-2 col-start-2 flex items-center justify-end">
-                                <span className="  select-none  border h-fit w-fit px-2 rounded-md bg-(--hover-secondary)/40  hover:bg-(--hover-secondary)">{el.to}</span>
+                            <div key={id} className="grid grid-cols-2 grid-rows-2 pt-5">
+                              <span className="select-none border h-fit w-fit px-2 rounded-md bg-(--hover-secondary)/40  hover:bg-(--hover-secondary)">{el.from}</span>
+                              <div className="row-start-2 col-start-2 flex items-center justify-end">
+                                  <span className="  select-none  border h-fit w-fit px-2 rounded-md bg-(--hover-secondary)/40  hover:bg-(--hover-secondary)">{el.to}</span>
+                              </div>
                             </div>
-                    </div>
                     
                         )
                     })
                 }
-                 
-           
-            
         </div>
-
-        
         <div className="absolute bottom-0  w-full h-fit rounded-b-2xl pb-1 ">
           <div className=" absolute -top-10 right-3 select-none">
             <div className="flex gap-2 items-center">
@@ -84,7 +72,7 @@ function Payment() {
             </div>
           </div>
           <div className="border-t pt-2" />
-          <div className="flex items-center justify-between px-3">
+          <div className="flex items-center justify-between px-3 pb-2">
             <input
               placeholder="Enter amount or chat"
               className="outline-none"

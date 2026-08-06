@@ -109,7 +109,7 @@ function Hero() {
             <Button
              typeOfBtn={resolvedTheme == "light" ? "white": "black"}
               aria-label="npm icon"
-              className="py-[11px]">
+              className="py-[7px]">
               <NpmSmallIcon />
             </Button>
           </Link>
