@@ -43,7 +43,7 @@ function Payment() {
               <div
                 key={id}
                 data-slot="heading"
-                className=" text-(--text-primary) text-sm flex justify-between items-center gap-2 border pb-1 pl-2 pr-1 rounded-2xl active:translate-y-px  transition-all hover:bg-(--hover-secondary) active:hover:bg-(--hover-secondary)"
+                className="transform-gpu will-change-transform text-(--text-primary) text-sm flex justify-between items-center gap-2 border pb-1 pl-2 pr-1 rounded-2xl active:translate-y-px  transition-all hover:bg-(--hover-secondary) active:hover:bg-(--hover-secondary)"
               >
                 <span className="pt-1 select-none">{el.name}</span>{" "}
                 {el.selected && (

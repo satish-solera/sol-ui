@@ -8,16 +8,14 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-         
-                <div
-                data-slot="layout"
-                className="relative z-10 flex flex-col min-h-svh">
-                <Navbar/>
-                      <div className="min-h-0 flex-1 flex-col">
-                          {children}
-                      </div>
-                <Footer/>
-                </div>
-          
+   <div
+     data-slot="layout"
+     className="relative z-10 flex flex-col min-h-0">
+      <Navbar/>
+         <div className="min-h-0 flex-1 flex-col">
+          {children}
+         </div>
+      <Footer/>
+  </div>
   );
 }

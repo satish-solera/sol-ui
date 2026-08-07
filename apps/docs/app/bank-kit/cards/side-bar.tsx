@@ -24,7 +24,6 @@ export const SideBar = () =>{
             return(
               <div 
               key={id}
-              
               data-slot="heading" className="pl-2 py-2 text-(--text-primary) text-sm flex items-center gap-2 hover:bg-[--hover-secondary] active:bg-[--hover-secondary] hover:text-foreground active:translate-y-px select-none transition-all whitespace-nowrap rounded-lg">{el.icon} {el.name}</div>
             )
           })

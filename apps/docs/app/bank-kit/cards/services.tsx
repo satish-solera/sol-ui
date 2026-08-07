@@ -25,6 +25,7 @@ export const Services = () =>{
                 key={id}
                 className="flex flex-col justify-center items-center active:translate-y-px">
                     <div className=" hover:bg-(--hover-secondary) border size-20 flex items-center justify-center rounded-lg">
+                      <span className="sr-only">{el.name}</span>
                      {el.icon}
                     </div>
                     <div data-slot="heading" className=" pl-2 text-(--text-primary) text-[12px] select-none">{el.name}</div>

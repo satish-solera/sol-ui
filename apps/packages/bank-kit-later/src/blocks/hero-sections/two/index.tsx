@@ -40,7 +40,7 @@ function PlayIcon({ className }: { className?: string }) {
 
 export function HeroTwo() {
   return (
-    <section className="relative min-h-screen overflow-hidden max-w-6xl">
+    <section className="relative min-h-svh overflow-hidden max-w-6xl">
       <Header/>
       <div className="relative mx-auto w-full  px-6 pb-5 pt-20 select-none">
           <div className="max-w-xl mx-auto">

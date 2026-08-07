@@ -39,6 +39,8 @@ export function CardsDemo (){
                 </CardSkelleton>
                 
                 </div>
+                
+                <div className="hidden md:block">
                 <div className="flex flex-col gap-3 items-start ">
 
                 <CardSkelleton className="py-10 px-5 hidden lg:block ">
@@ -53,6 +55,8 @@ export function CardsDemo (){
 
                     <Services />
                 </CardSkelleton>
+                </div>
+
                 </div>
 
             </div>
