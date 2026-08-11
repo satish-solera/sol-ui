@@ -31,7 +31,6 @@ function Pricing() {
                         <div data-slot="card-title" className="text-md font-medium border-b pl-4 py-2">
                             Monthly
                         </div>
-
                         <div className="pl-4 py-4">
                             {
                             monthly.map((el, id) => {
